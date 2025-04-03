@@ -1,6 +1,43 @@
 // Definições de jogos
 const Games = [
     {
+        name: 'Mole Maniacs',
+        author: {
+            name: 'Muriki Studio',
+            url: 'https://murikistudio.com.br/',
+        },
+        description: '<strong>Mole Maniacs</strong> é um jogo estilo Whack-A-Mole! Complete missões em diferentes níveis, acerte as toupeiras, colete moedas para comprar novos martelos, não deixe sua barra de energia chegar a zero!',
+        images: [
+            '/assets/img/games/molemaniacs/screenshot-1.webp',
+            'https://murikistudio.com.br/assets/img/mole-maniacs/screenshot-1.webp',
+            '/assets/img/games/molemaniacs/screenshot-9.webp',
+            '/assets/img/games/molemaniacs/screenshot-10.webp',
+            '/assets/img/games/molemaniacs/screenshot-11.webp',
+        ],
+        links: [
+            {
+                icon: 'googleplay.svg',
+                class: 'bg-white',
+                url: 'https://play.google.com/store/apps/details?id=com.muriki.molemaniacs',
+            },
+            {
+                icon: 'youtube.svg',
+                class: 'bg-danger',
+                url: 'https://www.youtube.com/@murikistudio',
+            },
+            {
+                icon: 'discord.svg',
+                class: 'bg-primary',
+                url: 'https://discord.gg/f35uuhCvQn',
+            },
+            {
+                icon: 'instagram.svg',
+                class: 'bg-danger',
+                url: 'https://www.instagram.com/murikistudio',
+            },
+        ],
+    },
+    {
         name: 'Zombies & Bullets',
         author: {
             name: 'Muriki Studio',
