@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <!-- Favicons -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicons -->
     <link rel="canonical" href="https://devsdejogos.com.br/" />
     <link rel="shortcut icon" type="image/x-icon" href="/assets/favicons/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-icon-180x180.png">
@@ -62,13 +64,19 @@
                             <div class="swiper-button-next"></div>
                         </div>
 
+                        <!-- Body -->
                         <div class="card-body">
-                            <h5 class="card-title" v-text="game.name"></h5>
+                            <h5 class="card-title">
+                                {{ game.name }}
+                                <small class="text-muted">
+                                    (Por: <a target="_blank" :href="game.author.url">{{ game.author.name }}</a>)
+                                </small>
+                            </h5>
                             <p class="card-text">
                                 <small v-html="game.description"></small>
                             </p>
-                            <a v-for="link in game.links" :href="link.url" target="_blank" class="btn border p-2" :class="link.class">
-                                <img :src="'/assets/img/icons/' + link.icon" style="width: 2.5rem; height: 2.5rem;">
+                            <a v-for="link in game.links" :href="link.url" target="_blank" class="btn border p-2 mx-1" :class="link.class">
+                                <img :src="'/assets/img/icons/' + link.icon" style="width: 2rem; height: 2rem;">
                             </a>
                         </div>
                     </div>
