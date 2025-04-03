@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Vue -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.min.js"
+        integrity="sha512-rgrFBaGRHjj2cy6RtcWr21S4oSicNV/Y3qACuRZZIVdi6hGIXOKZeFTtzFFZCJ7cI4OrwbY7/FGVvaJ5hXJdJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Devs de Jogos</title>
+</head>
+
+<body class="bg-dark text-light p-4">
+
+    <!-- Template -->
+    <div id="app">
+        <h1 class="text-center">Devs de Jogos</h1>
+        <p class="text-center">{{ message }}</p>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    message: 'Em construção...',
+                };
+            },
+
+            mounted() {
+            },
+
+            methods: {
+            },
+        }).mount("#app");
+    </script>
+</body>
+
+</html>
