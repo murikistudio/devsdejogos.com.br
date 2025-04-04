@@ -35,7 +35,7 @@
     <!-- Template -->
     <div id="app">
         <h1 class="text-center">Devs de Jogos</h1>
-        <p class="text-center">{{ message }}</p>
+        <p class="text-center"><strong>(Site em construção...)</strong></p>
 
         <div class="container text-center">
             <div class="row justify-content-md-center">
@@ -80,6 +80,21 @@
                 </div>
             </div>
         </div>
+        <p class="text-center mt-4 mb-2">
+            <small>
+                Quer ter o seu jogo listado aqui? Abra um
+                <a target="_blank" href="https://github.com/murikistudio/devsdejogos.com.br/issues">issue</a> ou
+                <a target="_blank" href="https://github.com/murikistudio/devsdejogos.com.br/pulls">pull request</a> no repositório do GitHub e faça sua solicitação.
+            </small>
+        </p>
+
+        <p class="text-center">
+            <small>
+                Participe do grupo
+                <a target="_blank" href="https://chat.whatsapp.com/I2OGk3u5qwCKm0adv3DDqz">Desenvolvedores de Jogos</a>
+                no WhatsApp!
+            </small>
+        </p>
     </div>
 
     <!-- JavaScript -->
@@ -89,7 +104,6 @@
         createApp({
             data() {
                 return {
-                    message: 'Em construção...',
                     games: Games,
                 };
             },
