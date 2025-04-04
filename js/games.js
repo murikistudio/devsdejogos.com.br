@@ -8,11 +8,11 @@ const Games = [
         },
         description: '<strong>Mole Maniacs</strong> é um jogo estilo Whack-A-Mole! Complete missões em diferentes níveis, acerte as toupeiras, colete moedas para comprar novos martelos, não deixe sua barra de energia chegar a zero!',
         images: [
-            '/assets/games/molemaniacs/screenshot-1.webp',
+            '/img/games/molemaniacs/screenshot-1.webp',
             'https://murikistudio.com.br/assets/img/mole-maniacs/screenshot-1.webp',
-            '/assets/games/molemaniacs/screenshot-9.webp',
-            '/assets/games/molemaniacs/screenshot-10.webp',
-            '/assets/games/molemaniacs/screenshot-11.webp',
+            '/img/games/molemaniacs/screenshot-9.webp',
+            '/img/games/molemaniacs/screenshot-10.webp',
+            '/img/games/molemaniacs/screenshot-11.webp',
         ],
         links: [
             {
@@ -45,9 +45,9 @@ const Games = [
         },
         description: '...',
         images: [
-            '/assets/games/thecriminalcodebrasil/screenshot-1.jpg',
-            '/assets/games/thecriminalcodebrasil/screenshot-2.jpg',
-            '/assets/games/thecriminalcodebrasil/screenshot-3.jpg',
+            '/img/games/thecriminalcodebrasil/screenshot-1.jpg',
+            '/img/games/thecriminalcodebrasil/screenshot-2.jpg',
+            '/img/games/thecriminalcodebrasil/screenshot-3.jpg',
         ],
         links: [
             {
