@@ -8,11 +8,11 @@ const Games = [
         },
         description: '<strong>Mole Maniacs</strong> é um jogo estilo Whack-A-Mole! Complete missões em diferentes níveis, acerte as toupeiras, colete moedas para comprar novos martelos, não deixe sua barra de energia chegar a zero!',
         images: [
-            '/assets/img/games/molemaniacs/screenshot-1.webp',
+            '/assets/games/molemaniacs/screenshot-1.webp',
             'https://murikistudio.com.br/assets/img/mole-maniacs/screenshot-1.webp',
-            '/assets/img/games/molemaniacs/screenshot-9.webp',
-            '/assets/img/games/molemaniacs/screenshot-10.webp',
-            '/assets/img/games/molemaniacs/screenshot-11.webp',
+            '/assets/games/molemaniacs/screenshot-9.webp',
+            '/assets/games/molemaniacs/screenshot-10.webp',
+            '/assets/games/molemaniacs/screenshot-11.webp',
         ],
         links: [
             {
@@ -34,6 +34,41 @@ const Games = [
                 icon: 'instagram.svg',
                 class: 'bg-danger',
                 url: 'https://www.instagram.com/murikistudio',
+            },
+        ],
+    },
+    {
+        name: 'The Criminal Code Brasil',
+        author: {
+            name: 'Yuri Heinz Games',
+            url: 'https://linktr.ee/yuriheinz',
+        },
+        description: '...',
+        images: [
+            '/assets/games/thecriminalcodebrasil/screenshot-1.jpg',
+            '/assets/games/thecriminalcodebrasil/screenshot-2.jpg',
+            '/assets/games/thecriminalcodebrasil/screenshot-3.jpg',
+        ],
+        links: [
+            {
+                icon: 'email.svg',
+                class: 'bg-primary',
+                url: 'https://linktr.ee/yuriheinz',
+            },
+            {
+                icon: 'youtube.svg',
+                class: 'bg-danger',
+                url: 'https://www.youtube.com/@yuriheinz4297',
+            },
+            {
+                icon: 'facebook.svg',
+                class: 'bg-primary',
+                url: 'https://www.facebook.com/yuriheinzgames/',
+            },
+            {
+                icon: 'instagram.svg',
+                class: 'bg-danger',
+                url: 'https://www.instagram.com/yuriheinzgames',
             },
         ],
     },

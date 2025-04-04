@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devs de Jogos</title>
 
     <!-- Favicons -->
     <link rel="canonical" href="https://devsdejogos.com.br/" />
@@ -15,26 +16,18 @@
     <link rel="manifest" href="/assets/favicons/site.webmanifest">
 
     <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
-        integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"
-        integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="/libs/swiper/swiper-bundle.min.css" />
+    <script src="/libs/swiper/swiper-bundle.min.js"></script>
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
-        integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
 
     <!-- Vue -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.5.13/vue.global.min.js"
-        integrity="sha512-rgrFBaGRHjj2cy6RtcWr21S4oSicNV/Y3qACuRZZIVdi6hGIXOKZeFTtzFFZCJ7cI4OrwbY7/FGVvaJ5hXJdJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Devs de Jogos</title>
+    <script src="/libs/vue/vue.global.min.js"></script>
 
-    <script src="/assets/js/games.js"></script>
+    <!-- App -->
+    <script src="/js/games.js"></script>
+    <link rel="stylesheet" href="/css/main.css" />
 </head>
 
 <body class="bg-dark text-light p-4">
@@ -79,7 +72,7 @@
                                 <a v-for="link in game.links" :href="link.url" target="_blank"
                                     class="btn border d-flex justify-content-center align-items-center p-1 mx-1"
                                     :class="link.class" style="width: 2rem; height: 2rem;">
-                                    <img :src="'/assets/img/icons/' + link.icon" class="w-100">
+                                    <img :src="'/assets/icons/' + link.icon" class="w-100">
                                 </a>
                             </div>
                         </div>
