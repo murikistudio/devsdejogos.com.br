@@ -19,6 +19,10 @@ body {
     animation: background-scroll 60s linear infinite;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 a {
     text-decoration: none !important;
 }
