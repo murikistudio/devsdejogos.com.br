@@ -24,17 +24,51 @@ const Games = [
         ],
     },
     {
+        name: 'DefendAnts',
+        genres: ['casual', 'arcade'],
+        author_name: 'Snakegbr',
+        author_url: 'https://murikistudio.com.br/',
+        description: 'A jogabilidade lembra o clássico jogo Snake: conforme você coleta folhas, sua formiga cresce mais, tornando cada vez mais desafiador navegar pelo espaço sem colidir consigo mesma ou com as bordas.',
+        images: [
+            '/assets/img/games/defendants/screenshot-1.webp',
+            '/assets/img/games/defendants/screenshot-2.webp',
+            '/assets/img/games/defendants/screenshot-3.webp',
+        ],
+        links: [
+            {
+                icon: 'googleplay.svg',
+                class: 'bg-white',
+                url: 'https://play.google.com/store/apps/details?id=com.snakegbr.defendants',
+            },
+            {
+                icon: 'youtube.svg',
+                class: 'bg-danger',
+                url: 'https://www.youtube.com/@snakegbr',
+            },
+            {
+                icon: 'discord.svg',
+                class: 'bg-primary',
+                url: 'https://discord.gg/f35uuhCvQn',
+            },
+            {
+                icon: 'instagram.svg',
+                class: 'bg-danger',
+                url: 'https://www.instagram.com/snakegbr',
+            },
+        ],
+    },
+    {
         name: 'Mole Maniacs',
         genres: ['casual', 'arcade'],
         author_name: 'Muriki Studio',
         author_url: 'https://murikistudio.com.br/',
         description: '<strong>Mole Maniacs</strong> é um jogo estilo Whack-A-Mole! Complete missões em diferentes níveis, acerte as toupeiras, colete moedas para comprar novos martelos, não deixe sua barra de energia chegar a zero!',
         images: [
-            '/assets//img/games/molemaniacs/screenshot-1.webp',
-            '/assets//img/games/molemaniacs/screenshot-2.webp',
-            '/assets//img/games/molemaniacs/screenshot-9.webp',
-            '/assets//img/games/molemaniacs/screenshot-10.webp',
-            '/assets//img/games/molemaniacs/screenshot-11.webp',
+            '/assets/img/games/molemaniacs/screenshot-1.webp',
+            '/assets/img/games/molemaniacs/screenshot-2.webp',
+            '/assets/img/games/molemaniacs/screenshot-9.webp',
+            '/assets/img/games/molemaniacs/screenshot-10.webp',
+            '/assets/img/games/molemaniacs/screenshot-11.webp',
         ],
         links: [
             {
@@ -66,9 +100,9 @@ const Games = [
         author_url: 'https://linktr.ee/yuriheinz',
         description: 'The Criminal Code: Brasil é um jogo de ação em mundo aberto onde você sobrevive no coração da criminalidade urbana, enfrentando polícia, rivais e o próprio destino nas ruas do Brasil.',
         images: [
-            '/assets//img/games/thecriminalcodebrasil/screenshot-1.jpg',
-            '/assets//img/games/thecriminalcodebrasil/screenshot-2.jpg',
-            '/assets//img/games/thecriminalcodebrasil/screenshot-3.jpg',
+            '/assets/img/games/thecriminalcodebrasil/screenshot-1.jpg',
+            '/assets/img/games/thecriminalcodebrasil/screenshot-2.jpg',
+            '/assets/img/games/thecriminalcodebrasil/screenshot-3.jpg',
         ],
         links: [
             {
