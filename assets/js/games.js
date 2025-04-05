@@ -1,6 +1,34 @@
 // Definições de jogos
 const Games = [
     {
+        name: 'Birds Adventure',
+        genres: ['action', 'adventure', 'casual'],
+        author_name: 'Vinicius Oliveira',
+        author_url: 'https://www.facebook.com/profile.php?id=100006857140925',
+        description: 'Embarque em uma jornada emocionante com <strong>Flynn</strong>, um pássaro corajoso cuja vida pacífica é interrompida quando seu filho é capturado. Determinado a recuperá-lo, <strong>Flynn</strong> mergulha em uma busca perigosa através de terras deslumbrantes e repletas de perigos.',
+        images: [
+            '/assets/img/games/birdsadventure/screenshot-1.webp',
+            '/assets/img/games/birdsadventure/screenshot-2.webp',
+            '/assets/img/games/birdsadventure/screenshot-3.webp',
+            '/assets/img/games/birdsadventure/screenshot-4.webp',
+            '/assets/img/games/birdsadventure/screenshot-5.webp',
+            '/assets/img/games/birdsadventure/screenshot-6.webp',
+            '/assets/img/games/birdsadventure/screenshot-7.webp',
+        ],
+        links: [
+            {
+                icon: 'steam.svg',
+                class: 'bg-primary-subtle',
+                url: 'https://store.steampowered.com/app/2956760/Birds_Adventure/',
+            },
+            {
+                icon: 'facebook.svg',
+                class: 'bg-primary',
+                url: 'https://www.facebook.com/profile.php?id=100006857140925',
+            },
+        ],
+    },
+    {
         name: 'Christmas Smash',
         genres: ['action', 'arcade', 'rpg'],
         author_name: 'ArcadeNightmare',
