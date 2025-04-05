@@ -1,15 +1,69 @@
 <!-- Template -->
 <div id="app" class="text-light">
-    <p class="text-center">{{ site.description }}</p>
+    <p class="text-center my-3 mb-5">{{ site.description }}</p>
 
     <div class="container text-center">
+        <div class="d-inline-flex justify-content-between">
+
+            <!-- Ordenar -->
+            <div v-for="sort in sorts" class="dropdown mx-2">
+                <button class="btn btn-sm dropdown-toggle fs-10"
+                    :class="sortBy ? 'btn-success' : 'btn-secondary'"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-sort"></i>
+                    <span>&nbsp;</span>
+                    <span class="pl-3" v-text="sort.label"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li v-for="option in sort.options">
+                        <a @click="setSort(sort, option.value)" class="dropdown-item"
+                            :class="sortBy === option.value ? 'bg-success' : ''" href="#">
+                            <span v-text="option.label"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Filtrar -->
+            <div v-for="filter in filters" class="dropdown mx-2">
+                <button class="btn btn-sm dropdown-toggle fs-10"
+                    :class="filter.field === filterBy ? 'btn-success' : 'btn-secondary'"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-filter"></i>
+                    <span>&nbsp;</span>
+                    <span v-text="filter.label"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li v-for="option in filter.options">
+                        <a @click="setFilter(filter, option.value)" class="dropdown-item"
+                            :class="filterByValue === option.value ? 'bg-success' : ''" href="#">
+                            <span v-text="option.label"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Limpar filtros -->
+            <button v-if="sortBy || filterBy || filterByValue" @click="clearFilters" class="btn btn-sm btn-danger mx-2">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+        </div>
+
         <div class="row justify-content-md-center">
             <div v-for="game in games" class="col-md-6 col-lg-4 col-xl-3 col justify-content-center my-3">
 
                 <div class="card bg-dark text-light rounded-4 shadow h-100">
 
                     <!-- Images -->
-                    <div class="swiper w-100 rounded-top-4">
+                    <div @click="showModal(game)" class="text-decoration-none d-flex flex-column overflow-hidden">
+                        <img class="rounded-top-4" loading="lazy" :src="game.images[0]" :alt="game.name">
+                    </div>
+
+                    <!-- <div class="swiper w-100 rounded-top-4">
                         <div class="swiper-wrapper">
                             <div v-for="image in game.images" class="swiper-slide">
                                 <div class="text-decoration-none d-flex flex-column overflow-hidden">
@@ -18,23 +72,25 @@
                             </div>
                         </div>
                         <div class="swiper-pagination"></div>
-                    </div>
+                    </div> -->
 
                     <!-- Body -->
                     <div class="card-body d-flex flex-column justify-content-between">
-                        <h4 class="card-title" v-text="game.name"></h4>
-                        <p>
-                            <small class="text-muted">
-                                (Por: <a target="_blank" :href="game.author.url" v-text="game.author.name"></a>)
-                            </small>
-                        </p>
-                        <p class="card-text">
+                        <div>
+                            <h4 @click="showModal(game)" class="card-title mb-0" v-text="game.name"></h4>
+                            <p class="mb-3">
+                                <small class="text-muted">
+                                    (Por: <a target="_blank" :href="game.author_url" v-text="game.author_name"></a>)
+                                </small>
+                            </p>
+                        </div>
+                        <p @click="showModal(game)" class="card-text mb-4">
                             <small v-html="game.description"></small>
                         </p>
                         <div class="d-inline-flex justify-content-center">
                             <a v-for="link in game.links" :href="link.url" target="_blank"
-                                class="btn border d-flex justify-content-center align-items-center p-1 mx-1"
-                                :class="link.class" style="width: 2rem; height: 2rem;">
+                                class="btn border d-flex justify-content-center align-items-center mx-1"
+                                :class="link.class" style="width: 1.5rem; height: 1.5rem; padding: 4px">
                                 <img :src="'/assets/img/icons/' + link.icon" class="w-100">
                             </a>
                         </div>

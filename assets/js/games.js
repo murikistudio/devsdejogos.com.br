@@ -2,10 +2,9 @@
 const Games = [
     {
         name: 'Mole Maniacs',
-        author: {
-            name: 'Muriki Studio',
-            url: 'https://murikistudio.com.br/',
-        },
+        genres: ['casual', 'arcade'],
+        author_name: 'Muriki Studio',
+        author_url: 'https://murikistudio.com.br/',
         description: '<strong>Mole Maniacs</strong> é um jogo estilo Whack-A-Mole! Complete missões em diferentes níveis, acerte as toupeiras, colete moedas para comprar novos martelos, não deixe sua barra de energia chegar a zero!',
         images: [
             '/assets//img/games/molemaniacs/screenshot-1.webp',
@@ -39,10 +38,9 @@ const Games = [
     },
     {
         name: 'The Criminal Code Brasil',
-        author: {
-            name: 'Yuri Heinz Games',
-            url: 'https://linktr.ee/yuriheinz',
-        },
+        genres: ['action', 'arcade', 'adventure', 'rpg'],
+        author_name: 'Yuri Heinz Games',
+        author_url: 'https://linktr.ee/yuriheinz',
         description: 'The Criminal Code: Brasil é um jogo de ação em mundo aberto onde você sobrevive no coração da criminalidade urbana, enfrentando polícia, rivais e o próprio destino nas ruas do Brasil.',
         images: [
             '/assets//img/games/thecriminalcodebrasil/screenshot-1.jpg',
@@ -74,10 +72,9 @@ const Games = [
     },
     {
         name: 'Zombies & Bullets',
-        author: {
-            name: 'Muriki Studio',
-            url: 'https://murikistudio.com.br/',
-        },
+        genres: ['action', 'adventure'],
+        author_name: 'Muriki Studio',
+        author_url: 'https://murikistudio.com.br/',
         description: '<strong>Zombies & Bullets</strong> é um jogo de tiro de ação top-down 3D onde você deve ajudar o soldado Jacob a enfrentar exércitos de zumbis em ambientes variados e desafiadores.',
         images: [
             'https://murikistudio.com.br/assets/img/zombies-and-bullets/screenshot-0.webp',
@@ -110,14 +107,195 @@ const Games = [
     },
 ];
 
+// Gêneros de jogos
+const Genres = [
+    {
+        label: 'Ação',
+        value: 'action',
+    },
+    {
+        label: 'Arcade',
+        value: 'arcade',
+    },
+    {
+        label: 'Aventura',
+        value: 'adventure',
+    },
+    {
+        label: 'Casual',
+        value: 'casual',
+    },
+    {
+        label: 'Corrida',
+        value: 'racing',
+    },
+    {
+        label: 'Esporte',
+        value: 'sports',
+    },
+    {
+        label: 'Estratégia',
+        value: 'strategy',
+    },
+    {
+        label: 'RPG',
+        value: 'rpg',
+    },
+    {
+        label: 'Simulação',
+        value: 'simulation',
+    },
+]
+
+// Ordenações de jogos
+const Sorts = [
+    {
+        label: 'Ordenar',
+        options: [
+            {
+                label: 'Nome',
+                value: 'name',
+            },
+            {
+                label: 'Autor',
+                value: 'author_name',
+            },
+        ],
+    },
+]
+
+// Filtros de jogos
+const Filters = [
+    {
+        label: 'Gênero',
+        field: 'genres',
+        options: 'genres',
+    },
+    {
+        label: 'Autores',
+        field: 'author_name',
+        options: 'authors',
+    },
+]
+
 // Vue
 const { createApp } = Vue;
 
 createApp({
     data() {
         return {
-            games: Games,
+            sortBy: '',
+            filterBy: '',
+            filterByValue: '',
         };
+    },
+
+    computed: {
+        games() {
+            let games = [...Games];
+
+            if (this.filterBy && this.filterByValue) {
+                games = games.filter((game) => {
+                    const game_field = game[this.filterBy];
+
+                    if (Array.isArray(game_field)) {
+                        return game_field.some(genre => genre === this.filterByValue);
+                    }
+
+                    return game[this.filterBy] === this.filterByValue;
+                });
+            }
+
+            if (this.sortBy) {
+                games = games.sort((a, b) => a[this.sortBy] >= b[this.sortBy] ? 1 : -1);
+            }
+
+            return games;
+        },
+
+        sorts() {
+            return Sorts;
+        },
+
+        filters() {
+            const filters = [];
+
+            for (const filter of Filters) {
+                filters.push({
+                    label: filter.label,
+                    field: filter.field,
+                    options: this[filter.options],
+                })
+            }
+
+            return filters;
+        },
+
+        authors() {
+            const authors = [];
+
+            for (const game of Games) {
+                if (!authors.some(author => author.value === game.author_name)) {
+                    authors.push({
+                        label: game.author_name,
+                        value: game.author_name,
+                    });
+                }
+            }
+
+            authors.sort((a, b) => a.label >= b.label ? 1 : -1);
+
+            return authors;
+        },
+
+        genres() {
+            const genres = [];
+
+            for (const game of Games) {
+                for (const genreKey of game.genres) {
+                    if (!genres.some(genre => genre.value === genreKey)) {
+                        for (const genre of Genres) {
+                            if (genre.value === genreKey) {
+                                genres.push(genre);
+                                break;
+                            }
+                        }
+                        break;
+                    }
+                }
+            }
+
+            return genres;
+        },
+    },
+
+    methods: {
+        setSort(sort, value) {
+            setTimeout(() => {
+                const current = this.sortBy;
+                this.sortBy = current !== value ? value : '';
+                console.log('sort', ':', current, '=>', value)
+            }, 100);
+        },
+
+        setFilter(filter, value) {
+            setTimeout(() => {
+                const current = this.filterByValue;
+                this.filterByValue = current !== value ? value : '';
+                this.filterBy = this.filterByValue ? filter.field : '';
+                console.log('filter', filter.field, ':', current, '=>', this.filterByValue)
+            }, 100);
+        },
+
+        clearFilters() {
+            this.sortBy = '';
+            this.filterBy = '';
+            this.filterByValue = '';
+        },
+
+        showModal(game) {
+            console.log(game);
+        }
     },
 
     mounted() {
@@ -133,8 +311,5 @@ createApp({
             loop: true,
             spaceBetween: 0,
         });
-    },
-
-    methods: {
     },
 }).mount("#app");
