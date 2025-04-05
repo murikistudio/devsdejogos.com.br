@@ -72,14 +72,6 @@ footer {
     border-right-style: solid;
 }
 
-.banner {
-    background-attachment: fixed;
-    background-size: contain;
-    height: 100%;
-    background-image: url(/assets/img/banner-background.webp);
-    animation: background-scroll 60s linear infinite;
-}
-
 @keyframes background-scroll {
     0% {
         background-position: 0px 0px
