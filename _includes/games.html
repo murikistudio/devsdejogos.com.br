@@ -63,17 +63,6 @@
                         <img class="rounded-top-4" loading="lazy" :src="game.images[0]" :alt="game.name">
                     </div>
 
-                    <!-- <div class="swiper w-100 rounded-top-4">
-                        <div class="swiper-wrapper">
-                            <div v-for="image in game.images" class="swiper-slide">
-                                <div class="text-decoration-none d-flex flex-column overflow-hidden">
-                                    <img class="" loading="lazy" :src="image" :alt="image">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div> -->
-
                     <!-- Body -->
                     <div class="card-body d-flex flex-column justify-content-between">
                         <div>
@@ -97,6 +86,36 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="gameModal" ref="gameModal" tabindex="-1" aria-labelledby="gameModalLabel">
+        <div class="modal-dialog">
+        <div v-if="selectedGame" class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5 mb-0 w-100 text-center" id="gameModalLabel" v-text="selectedGame?.name"></h1>
+            </div>
+            <div class="modal-body">
+                <div class="swiper w-100 rounded-4">
+                    <div class="swiper-wrapper">
+                        <div v-for="image in selectedGame?.images" class="swiper-slide">
+                            <div class="text-decoration-none d-flex flex-column overflow-hidden">
+                                <img class="" loading="lazy" :src="image" :alt="image">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="mt-4">
+                    <p v-html="selectedGame?.description"></p>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
         </div>
     </div>
 </div>

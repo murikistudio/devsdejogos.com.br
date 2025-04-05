@@ -7,13 +7,13 @@ const Games = [
         author_url: 'https://store.steampowered.com/app/2308050/Christmas_Smash/',
         description: '<strong>Papai Noel</strong> embarca em uma missão: derrote Krampus e seu exercito de elfos renegados. Uma aventura explosiva e cheia de ação! em um jogo de tiro com vista de cima.',
         images: [
-            '/assets//img/games/christmassmash/screenshot-1.webp',
-            '/assets//img/games/christmassmash/screenshot-2.webp',
-            '/assets//img/games/christmassmash/screenshot-3.webp',
-            '/assets//img/games/christmassmash/screenshot-4.webp',
-            '/assets//img/games/christmassmash/screenshot-5.webp',
-            '/assets//img/games/christmassmash/screenshot-6.webp',
-            '/assets//img/games/christmassmash/screenshot-7.webp',
+            '/assets/img/games/christmassmash/screenshot-1.webp',
+            '/assets/img/games/christmassmash/screenshot-2.webp',
+            '/assets/img/games/christmassmash/screenshot-3.webp',
+            '/assets/img/games/christmassmash/screenshot-4.webp',
+            '/assets/img/games/christmassmash/screenshot-5.webp',
+            '/assets/img/games/christmassmash/screenshot-6.webp',
+            '/assets/img/games/christmassmash/screenshot-7.webp',
         ],
         links: [
             {
@@ -207,6 +207,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+            selectedGame: null,
+            gameModal: null,
             sortBy: '',
             filterBy: '',
             filterByValue: '',
@@ -317,22 +319,34 @@ createApp({
         },
 
         showModal(game) {
-            console.log(game);
-        }
+            this.selectedGame = game;
+
+            setTimeout(() => {
+                // Swiper
+                const swiper = new Swiper('.swiper', {
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        type: 'bullets',
+                    },
+                    loop: true,
+                    spaceBetween: 0,
+                });
+
+                this.gameModal.show();
+            }, 100);
+        },
     },
 
     mounted() {
-        const swiper = new Swiper('.swiper', {
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'bullets',
-            },
-            loop: true,
-            spaceBetween: 0,
+        // Modal
+        this.gameModal = new bootstrap.Modal(document.getElementById('gameModal'));
+
+        this.$refs.gameModal.addEventListener('hidden.bs.modal', event => {
+            this.selectedGame = null;
         });
     },
 }).mount("#app");
