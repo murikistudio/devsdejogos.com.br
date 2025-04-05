@@ -2,6 +2,10 @@
   icon: whatsapp
   show_on_footer: false
   url: "https://chat.whatsapp.com/I2OGk3u5qwCKm0adv3DDqz"
+- name: Servidor no Discord
+  icon: discord
+  show_on_footer: false
+  url: "https://discord.gg/U7fK2e2aGn"
 - name: Envie seu jogo
   icon:
   show_on_footer: false
