@@ -8,11 +8,11 @@ const Games = [
         },
         description: '<strong>Mole Maniacs</strong> é um jogo estilo Whack-A-Mole! Complete missões em diferentes níveis, acerte as toupeiras, colete moedas para comprar novos martelos, não deixe sua barra de energia chegar a zero!',
         images: [
-            '/img/games/molemaniacs/screenshot-1.webp',
+            '/assets//img/games/molemaniacs/screenshot-1.webp',
             'https://murikistudio.com.br/assets/img/mole-maniacs/screenshot-1.webp',
-            '/img/games/molemaniacs/screenshot-9.webp',
-            '/img/games/molemaniacs/screenshot-10.webp',
-            '/img/games/molemaniacs/screenshot-11.webp',
+            '/assets//img/games/molemaniacs/screenshot-9.webp',
+            '/assets//img/games/molemaniacs/screenshot-10.webp',
+            '/assets//img/games/molemaniacs/screenshot-11.webp',
         ],
         links: [
             {
@@ -43,11 +43,11 @@ const Games = [
             name: 'Yuri Heinz Games',
             url: 'https://linktr.ee/yuriheinz',
         },
-        description: '...',
+        description: 'The Criminal Code: Brasil é um jogo de ação em mundo aberto onde você sobrevive no coração da criminalidade urbana, enfrentando polícia, rivais e o próprio destino nas ruas do Brasil.',
         images: [
-            '/img/games/thecriminalcodebrasil/screenshot-1.jpg',
-            '/img/games/thecriminalcodebrasil/screenshot-2.jpg',
-            '/img/games/thecriminalcodebrasil/screenshot-3.jpg',
+            '/assets//img/games/thecriminalcodebrasil/screenshot-1.jpg',
+            '/assets//img/games/thecriminalcodebrasil/screenshot-2.jpg',
+            '/assets//img/games/thecriminalcodebrasil/screenshot-3.jpg',
         ],
         links: [
             {
@@ -109,3 +109,32 @@ const Games = [
         ],
     },
 ];
+
+// Vue
+const { createApp } = Vue;
+
+createApp({
+    data() {
+        return {
+            games: Games,
+        };
+    },
+
+    mounted() {
+        const swiper = new Swiper('.swiper', {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+            loop: true,
+            spaceBetween: 0,
+        });
+    },
+
+    methods: {
+    },
+}).mount("#app");

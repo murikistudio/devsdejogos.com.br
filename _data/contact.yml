@@ -1,0 +1,8 @@
+- name: Grupo no WhatsApp
+  icon: whatsapp
+  show_on_footer: false
+  url: "https://chat.whatsapp.com/I2OGk3u5qwCKm0adv3DDqz"
+- name: Envie seu jogo
+  icon:
+  show_on_footer: false
+  url: "https://github.com/murikistudio/devsdejogos.com.br/issues"

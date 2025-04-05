@@ -1,0 +1,156 @@
+---
+---
+:root {
+    --swiper-theme-color: #ffffffc5 !important;
+}
+
+html, body {
+    --bs-link-color: #0dfd57;
+    --bs-link-hover-color: #0cd34b;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('/assets/img/banner-background.webp');
+    background-attachment: fixed;
+    animation: background-scroll 60s linear infinite;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+footer {
+    margin-top: auto;
+    position: relative;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-bars {
+    background-color: rgb(40 68 89 / 60%) !important;
+}
+
+.social-icon:hover {
+    color: white;
+    opacity: 0.9;
+    padding: 2px;
+}
+
+.social-icon-img:hover {
+    filter: sepia(1000) saturate(100) hue-rotate(60deg);
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 34px;
+    height: 28px;
+    padding: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-right-style: none;
+    transition: 0.1s padding;
+}
+
+.social-icon:first-child {
+    border-top-left-radius: 25%;
+    border-bottom-left-radius: 25%;
+}
+
+.social-icon:last-child {
+    border-top-right-radius: 25%;
+    border-bottom-right-radius: 25%;
+    border-right-style: solid;
+}
+
+.banner {
+    background-attachment: fixed;
+    background-size: contain;
+    height: 100%;
+    background-image: url(/assets/img/banner-background.webp);
+    animation: background-scroll 60s linear infinite;
+}
+
+@keyframes background-scroll {
+    0% {
+        background-position: 0px 0px
+    }
+
+    50% {
+        background-position: -600px 0px
+    }
+
+    100% {
+        background-position: 0px 0px
+    }
+}
+
+.page-content {
+    padding: 1.5rem !important;
+}
+
+.page-content-thin {
+    width: 768px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .page-content-thin {
+        width: 100%;
+        margin: 0;
+    }
+
+    .logo {
+        height: initial;
+        width: 65vw;
+    }
+
+    .navbar-collapse {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 1.2rem !important;
+}
+
+.navbar-nav {
+    flex-direction: row !important;
+    justify-content: space-evenly !important;
+    width: 256px;
+}
+
+li.nav-item {
+    width: 100%;
+    text-align: center;
+}
+
+li.nav-item:not(:last-child) {
+    border-right-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+
+.nav-link:hover, .navbar-brand:hover {
+    color: var(--bs-link-color) !important;
+}
+
+.hover {
+    transition: filter 0.2s;
+}
+
+.hover:hover {
+    filter: brightness(1.2);
+}

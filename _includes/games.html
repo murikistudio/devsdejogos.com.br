@@ -1,0 +1,48 @@
+<!-- Template -->
+<div id="app" class="text-light">
+    <p class="text-center">{{ site.description }}</p>
+
+    <div class="container text-center">
+        <div class="row justify-content-md-center">
+            <div v-for="game in games" class="col-md-6 col-lg-4 col-xl-3 col justify-content-center my-3">
+
+                <div class="card bg-dark text-light rounded-4 shadow h-100">
+
+                    <!-- Images -->
+                    <div class="swiper w-100 rounded-top-4">
+                        <div class="swiper-wrapper">
+                            <div v-for="image in game.images" class="swiper-slide">
+                                <div class="text-decoration-none d-flex flex-column overflow-hidden">
+                                    <img class="" loading="lazy" :src="image" :alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+
+                    <!-- Body -->
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h4 class="card-title" v-text="game.name"></h4>
+                        <p>
+                            <small class="text-muted">
+                                (Por: <a target="_blank" :href="game.author.url" v-text="game.author.name"></a>)
+                            </small>
+                        </p>
+                        <p class="card-text">
+                            <small v-html="game.description"></small>
+                        </p>
+                        <div class="d-inline-flex justify-content-center">
+                            <a v-for="link in game.links" :href="link.url" target="_blank"
+                                class="btn border d-flex justify-content-center align-items-center p-1 mx-1"
+                                :class="link.class" style="width: 2rem; height: 2rem;">
+                                <img :src="'/assets/img/icons/' + link.icon" class="w-100">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/assets/js/games.js"></script>
