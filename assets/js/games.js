@@ -46,11 +46,6 @@ const Games = [
                 url: 'https://www.youtube.com/@snakegbr',
             },
             {
-                icon: 'discord.svg',
-                class: 'bg-primary',
-                url: 'https://discord.gg/f35uuhCvQn',
-            },
-            {
                 icon: 'instagram.svg',
                 class: 'bg-danger',
                 url: 'https://www.instagram.com/snakegbr',
