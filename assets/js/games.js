@@ -1,6 +1,29 @@
 // Definições de jogos
 const Games = [
     {
+        name: 'Christmas Smash',
+        genres: ['action', 'arcade', 'rpg'],
+        author_name: 'ArcadeNightmare',
+        author_url: 'https://store.steampowered.com/app/2308050/Christmas_Smash/',
+        description: '<strong>Papai Noel</strong> embarca em uma missão: derrote Krampus e seu exercito de elfos renegados. Uma aventura explosiva e cheia de ação! em um jogo de tiro com vista de cima.',
+        images: [
+            '/assets//img/games/christmassmash/screenshot-1.webp',
+            '/assets//img/games/christmassmash/screenshot-2.webp',
+            '/assets//img/games/christmassmash/screenshot-3.webp',
+            '/assets//img/games/christmassmash/screenshot-4.webp',
+            '/assets//img/games/christmassmash/screenshot-5.webp',
+            '/assets//img/games/christmassmash/screenshot-6.webp',
+            '/assets//img/games/christmassmash/screenshot-7.webp',
+        ],
+        links: [
+            {
+                icon: 'steam.svg',
+                class: 'bg-primary-subtle',
+                url: 'https://store.steampowered.com/app/2308050/Christmas_Smash/',
+            },
+        ],
+    },
+    {
         name: 'Mole Maniacs',
         genres: ['casual', 'arcade'],
         author_name: 'Muriki Studio',
