@@ -2,7 +2,7 @@
 <div id="app" class="text-light">
 
     <!-- Cabeçalho -->
-    <div class="alert alert-dark page-content-thin mb-4">
+    <div class="alert alert-dark page-content-thin mb-2">
         <p class="text-center fs-5">
             <small>{{ site.description }}</small>
         </p>
@@ -18,15 +18,13 @@
         </div>
     </div>
 
-    <!-- Listagem -->
-    <div class="container text-center">
-
-        <!-- Filtros -->
-        <div class="d-inline-flex justify-content-between">
+    <!-- Filtros -->
+     <div class="justify-content-center page-content-thin">
+        <div class="row">
 
             <!-- Ordenar -->
-            <div class="dropdown mx-2">
-                <button class="btn btn-sm dropdown-toggle fs-7"
+            <div class="col dropdown">
+                <button class="btn btn-sm dropdown-toggle fs-7 w-100 mt-3"
                     :class="sortBy ? 'btn-success' : 'btn-secondary'"
                     type="button"
                     data-bs-toggle="dropdown"
@@ -46,8 +44,8 @@
             </div>
 
             <!-- Filtrar -->
-            <div v-for="filter in filters" class="dropdown mx-2">
-                <button class="btn btn-sm dropdown-toggle fs-7"
+            <div v-for="filter in filters" class="dropdown col">
+                <button class="btn btn-sm dropdown-toggle fs-7 w-100 mt-3"
                     :class="filter.field === filterBy ? 'btn-success' : 'btn-secondary'"
                     type="button"
                     data-bs-toggle="dropdown"
@@ -67,10 +65,16 @@
             </div>
 
             <!-- Limpar filtros -->
-            <button v-if="sortBy || filterBy || filterByValue" @click="clearFilters" class="btn btn-sm btn-danger mx-2">
-                <i class="fa-solid fa-trash"></i>
-            </button>
+             <div class="col mt-3">
+                 <button v-if="sortBy || filterBy || filterByValue" @click="clearFilters" class="btn btn-sm btn-danger w-100">
+                     <i class="fa-solid fa-trash"></i>
+                 </button>
+             </div>
         </div>
+     </div>
+
+    <!-- Listagem -->
+    <div class="container text-center">
 
         <div class="row justify-content-md-center">
             <div v-for="item in items" class="col-md-6 col-lg-4 col-xl-3 col justify-content-center my-3">
