@@ -90,7 +90,7 @@
                                 (Por: <a target="_blank" :href="item.author_url" v-text="item.author_name"></a>)
                             </p>
                             <p @click="showModal(item)" class="card-text mt-3 cursor-pointer font-tiny">
-                                <span v-html="item.description"></span>
+                                <span v-html="item.short_description"></span>
                             </p>
                         </div>
                         <div class="d-inline-flex justify-content-center">
@@ -126,7 +126,7 @@
                 </div>
 
                 <div class="mt-4">
-                    <p v-html="selectedItem?.description"></p>
+                    <p v-html="selectedItem?.short_description"></p>
                 </div>
             </div>
             <div class="modal-footer">
