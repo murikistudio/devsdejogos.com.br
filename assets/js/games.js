@@ -6,6 +6,7 @@ const Games = [
         genres: ['action', 'adventure', 'casual'],
         author_name: 'Vinicius Oliveira',
         author_url: 'https://www.facebook.com/profile.php?id=100006857140925',
+        date_added: '2023-04-05 20:00',
         description: 'Embarque em uma jornada emocionante com <strong>Flynn</strong>, um pássaro corajoso cuja vida pacífica é interrompida quando seu filho é capturado. Determinado a recuperá-lo, <strong>Flynn</strong> mergulha em uma busca perigosa através de terras deslumbrantes e repletas de perigos.',
         images: [
             'screenshot-1.webp',
@@ -27,6 +28,7 @@ const Games = [
         genres: ['action', 'arcade', 'rpg'],
         author_name: 'ArcadeNightmare',
         author_url: 'https://store.steampowered.com/app/2308050/Christmas_Smash/',
+        date_added: '2023-04-05 17:00',
         description: '<strong>Papai Noel</strong> embarca em uma missão: derrote Krampus e seu exercito de elfos renegados. Uma aventura explosiva e cheia de ação! em um jogo de tiro com vista de cima.',
         images: [
             'screenshot-1.webp',
@@ -47,6 +49,7 @@ const Games = [
         genres: ['casual', 'arcade'],
         author_name: 'Snakegbr',
         author_url: 'https://murikistudio.com.br/',
+        date_added: '2023-04-05 19:00',
         description: 'A jogabilidade lembra o clássico jogo Snake: conforme você coleta folhas, sua formiga cresce mais, tornando cada vez mais desafiador navegar pelo espaço sem colidir consigo mesma ou com as bordas.',
         images: [
             'screenshot-1.webp',
@@ -65,6 +68,7 @@ const Games = [
         genres: ['casual', 'arcade'],
         author_name: 'Muriki Studio',
         author_url: 'https://murikistudio.com.br/',
+        date_added: '2023-04-03 20:00',
         description: '<strong>Mole Maniacs</strong> é um jogo estilo Whack-A-Mole! Complete missões em diferentes níveis, acerte as toupeiras, colete moedas para comprar novos martelos, não deixe sua barra de energia chegar a zero!',
         images: [
             'screenshot-1.webp',
@@ -86,6 +90,7 @@ const Games = [
         genres: ['action', 'arcade', 'adventure', 'rpg'],
         author_name: 'Yuri Heinz Games',
         author_url: 'https://linktr.ee/yuriheinz',
+        date_added: '2023-04-04 15:00',
         description: 'The Criminal Code: Brasil é um jogo de ação em mundo aberto onde você sobrevive no coração da criminalidade urbana, enfrentando polícia, rivais e o próprio destino nas ruas do Brasil.',
         images: [
             'screenshot-1.jpg',
@@ -105,6 +110,7 @@ const Games = [
         genres: ['action', 'adventure'],
         author_name: 'Muriki Studio',
         author_url: 'https://murikistudio.com.br/',
+        date_added: '2023-04-03 19:00',
         description: '<strong>Zombies & Bullets</strong> é um jogo de tiro de ação top-down 3D onde você deve ajudar o soldado Jacob a enfrentar exércitos de zumbis em ambientes variados e desafiadores.',
         images: [
             'screenshot-1.webp',
@@ -166,19 +172,21 @@ const Genres = [
 // Ordenações de jogos
 const Sorts = [
     {
-        label: 'Ordenar',
-        options: [
-            {
-                label: 'Nome',
-                value: 'name',
-            },
-            {
-                label: 'Autor',
-                value: 'author_name',
-            },
-        ],
+        label: 'Adicionado em',
+        value: 'date_added',
+        order: 'desc',
     },
-]
+    {
+        label: 'Nome do Jogo',
+        value: 'name',
+        order: 'asc',
+    },
+    {
+        label: 'Desenvolvedor',
+        value: 'author_name',
+        order: 'asc',
+    },
+];
 
 // Filtros de jogos
 const Filters = [
@@ -188,7 +196,7 @@ const Filters = [
         options: 'genres',
     },
     {
-        label: 'Autores',
+        label: 'Desenvolvedor',
         field: 'author_name',
         options: 'authors',
     },
@@ -202,7 +210,8 @@ createApp({
         return {
             selectedGame: null,
             gameModal: null,
-            sortBy: '',
+            sortBy: Sorts[0].value,
+            sortOrder: Sorts[0].order,
             filterBy: '',
             filterByValue: '',
         };
@@ -225,7 +234,16 @@ createApp({
             }
 
             if (this.sortBy) {
-                games = games.sort((a, b) => a[this.sortBy] >= b[this.sortBy] ? 1 : -1);
+                games = games.sort((a, b) => {
+                    const valA = a[this.sortBy];
+                    const valB = b[this.sortBy];
+
+                    if (this.sortOrder === 'desc') {
+                        return valA < valB ? 1 : valA > valB ? -1 : 0;
+                    } else {
+                        return valA > valB ? 1 : valA < valB ? -1 : 0;
+                    }
+                });
             }
 
             return games;
@@ -290,11 +308,12 @@ createApp({
     methods: {
         getIconByUrl,
 
-        setSort(sort, value) {
+        setSort(sort) {
             setTimeout(() => {
                 const current = this.sortBy;
-                this.sortBy = current !== value ? value : '';
-                console.log('sort', ':', current, '=>', value)
+                this.sortBy = current !== sort.value ? sort.value : '';
+                this.sortOrder = this.sortBy ? sort.order : '';
+                console.log('sort', sort.label, ':', current, '=>', sort.value, sort.order)
             }, 100);
         },
 
@@ -309,6 +328,7 @@ createApp({
 
         clearFilters() {
             this.sortBy = '';
+            this.sortOrder = '';
             this.filterBy = '';
             this.filterByValue = '';
         },

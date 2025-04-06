@@ -6,21 +6,21 @@
         <div class="d-inline-flex justify-content-between">
 
             <!-- Ordenar -->
-            <div v-for="sort in sorts" class="dropdown mx-2">
-                <button class="btn btn-sm dropdown-toggle fs-10"
+            <div class="dropdown mx-2">
+                <button class="btn btn-sm dropdown-toggle fs-7"
                     :class="sortBy ? 'btn-success' : 'btn-secondary'"
                     type="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false">
                     <i class="fa-solid fa-sort"></i>
                     <span>&nbsp;</span>
-                    <span class="pl-3" v-text="sort.label"></span>
+                    <span class="pl-3">Ordenação</span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li v-for="option in sort.options">
-                        <a @click="setSort(sort, option.value)" class="dropdown-item"
-                            :class="sortBy === option.value ? 'bg-success' : ''" href="#">
-                            <span v-text="option.label"></span>
+                    <li v-for="sort in sorts">
+                        <a @click="setSort(sort)" class="dropdown-item"
+                            :class="sortBy === sort.value ? 'bg-success' : ''" href="#">
+                            <span v-text="sort.label"></span>
                         </a>
                     </li>
                 </ul>
@@ -28,7 +28,7 @@
 
             <!-- Filtrar -->
             <div v-for="filter in filters" class="dropdown mx-2">
-                <button class="btn btn-sm dropdown-toggle fs-10"
+                <button class="btn btn-sm dropdown-toggle fs-7"
                     :class="filter.field === filterBy ? 'btn-success' : 'btn-secondary'"
                     type="button"
                     data-bs-toggle="dropdown"
@@ -94,7 +94,7 @@
         <div class="modal-dialog">
         <div v-if="selectedGame" class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5 mb-0 w-100 text-center" id="gameModalLabel" v-text="selectedGame?.name"></h1>
+                <h1 class="modal-title fs-3 mb-0 w-100 text-center" id="gameModalLabel" v-text="selectedGame?.name"></h1>
             </div>
             <div class="modal-body">
                 <div class="swiper w-100 rounded-4">
