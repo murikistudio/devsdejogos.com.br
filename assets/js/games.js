@@ -354,6 +354,30 @@ createApp({
                 this.itemModal.show();
             }, 100);
         },
+
+        getSortLabel(sortValue) {
+            for (const sort of Sorts) {
+                if (sort.value === sortValue) {
+                    return sort.label;
+                }
+            }
+
+            return 'Ordenação';
+        },
+
+        getFilterLabel(filter) {
+            if (!this.filterBy) {
+                return filter.label;
+            }
+
+            for (const option of filter.options) {
+                if (option.value === this.filterByValue) {
+                    return option.label;
+                }
+            }
+
+            return filter.label;
+        },
     },
 
     mounted() {

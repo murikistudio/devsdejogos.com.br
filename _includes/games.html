@@ -31,7 +31,7 @@
                     aria-expanded="false">
                     <i class="fa-solid fa-sort"></i>
                     <span>&nbsp;</span>
-                    <span class="pl-3">Ordenação</span>
+                    <span class="pl-3" v-text="getSortLabel(sortBy)"></span>
                 </button>
                 <ul class="dropdown-menu">
                     <li v-for="sort in sorts">
@@ -52,7 +52,7 @@
                     aria-expanded="false">
                     <i class="fa-solid fa-filter"></i>
                     <span>&nbsp;</span>
-                    <span v-text="filter.label"></span>
+                    <span v-text="getFilterLabel(filter)"></span>
                 </button>
                 <ul class="dropdown-menu">
                     <li v-for="option in filter.options">
