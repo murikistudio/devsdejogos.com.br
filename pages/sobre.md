@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Sobre
-permalink: about
+permalink: sobre
 content_thin: true
 ---
 
