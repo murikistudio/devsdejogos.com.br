@@ -125,7 +125,6 @@ h1 {
 .navbar-nav {
     flex-direction: row !important;
     justify-content: space-evenly !important;
-    width: 256px;
 }
 
 li.nav-item {
