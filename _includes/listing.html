@@ -1,29 +1,12 @@
 <!-- Template -->
 <div id="app" class="text-light">
 
-    <!-- Cabeçalho -->
-    <div class="alert alert-dark page-content-thin mb-2">
-        <p class="text-center fs-5">
-            <small>{{ site.description }}</small>
-        </p>
-        <div class="alert alert-secondary m-0 p-2" role="alert">
-            <p class="text-center m-0 font-tiny">
-                <small>
-                    <strong>Quer ver seu jogo aqui?</strong> Participe do grupo <i>Desenvolvedores de Jogos</i> no
-                    <a target="_blank" href="{{ site.data.contact[0].url }}">WhatsApp</a>
-                    ou abra um issue no
-                    <a target="_blank" href="{{ site.data.contact[2].url }}">GitHub</a>!
-                </small>
-            </p>
-        </div>
-    </div>
-
     <!-- Filtros -->
-     <div class="justify-content-center page-content-thin">
+     <div v-if="sorts.length > 0 || filters.length > 0" class="justify-content-center page-content-thin">
         <div class="row">
 
             <!-- Ordenar -->
-            <div class="col dropdown">
+            <div v-if="sorts.length > 0" class="col dropdown">
                 <button class="btn btn-sm dropdown-toggle fs-7 w-100 mt-3"
                     :class="sortBy ? 'btn-success' : 'btn-secondary'"
                     type="button"
@@ -44,7 +27,7 @@
             </div>
 
             <!-- Filtrar -->
-            <div v-for="filter in filters" class="dropdown col">
+            <div v-if="filters.length > 0" v-for="filter in filters" class="dropdown col">
                 <button class="btn btn-sm dropdown-toggle fs-7 w-100 mt-3"
                     :class="filter.field === filterBy ? 'btn-success' : 'btn-secondary'"
                     type="button"
@@ -141,4 +124,4 @@
     </div>
 </div>
 
-<script src="/assets/js/games.js"></script>
+<script src="/assets/js/listing.js"></script>

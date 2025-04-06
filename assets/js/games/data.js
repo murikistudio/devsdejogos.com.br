@@ -1,5 +1,5 @@
 // Definições de jogos
-const Data = [
+document.ListingData = [
     {
         name: 'Birds Adventure',
         directory: 'games/birdsadventure',
@@ -130,7 +130,7 @@ const Data = [
 ];
 
 // Gêneros de jogos
-const Tags = [
+document.ListingTags = [
     {
         label: 'Ação',
         value: 'action',
@@ -167,10 +167,10 @@ const Tags = [
         label: 'Simulação',
         value: 'simulation',
     },
-]
+];
 
 // Ordenações de jogos
-const Sorts = [
+document.ListingSorts = [
     {
         label: 'Mais Recentes',
         value: 'date_added',
@@ -189,7 +189,7 @@ const Sorts = [
 ];
 
 // Filtros de jogos
-const Filters = [
+document.ListingFilters = [
     {
         label: 'Gênero',
         field: 'tags',
@@ -200,192 +200,4 @@ const Filters = [
         field: 'author_name',
         options: 'authors',
     },
-]
-
-// Vue
-const { createApp } = Vue;
-
-createApp({
-    data() {
-        return {
-            selectedItem: null,
-            itemModal: null,
-            sortBy: Sorts[0].value,
-            sortOrder: Sorts[0].order,
-            filterBy: '',
-            filterByValue: '',
-        };
-    },
-
-    computed: {
-        items() {
-            let items = [...Data];
-
-            if (this.filterBy && this.filterByValue) {
-                items = items.filter((item) => {
-                    const item_field = item[this.filterBy];
-
-                    if (Array.isArray(item_field)) {
-                        return item_field.some(tag => tag === this.filterByValue);
-                    }
-
-                    return item[this.filterBy] === this.filterByValue;
-                });
-            }
-
-            if (this.sortBy) {
-                items = items.sort((a, b) => {
-                    const valA = a[this.sortBy];
-                    const valB = b[this.sortBy];
-
-                    if (this.sortOrder === 'desc') {
-                        return valA < valB ? 1 : valA > valB ? -1 : 0;
-                    } else {
-                        return valA > valB ? 1 : valA < valB ? -1 : 0;
-                    }
-                });
-            }
-
-            return items;
-        },
-
-        sorts() {
-            return Sorts;
-        },
-
-        filters() {
-            const filters = [];
-
-            for (const filter of Filters) {
-                filters.push({
-                    label: filter.label,
-                    field: filter.field,
-                    options: this[filter.options],
-                })
-            }
-
-            return filters;
-        },
-
-        authors() {
-            const authors = [];
-
-            for (const item of Data) {
-                if (!authors.some(author => author.value === item.author_name)) {
-                    authors.push({
-                        label: item.author_name,
-                        value: item.author_name,
-                    });
-                }
-            }
-
-            authors.sort((a, b) => a.label >= b.label ? 1 : -1);
-
-            return authors;
-        },
-
-        tags() {
-            const tags = [];
-
-            for (const item of Data) {
-                for (const tagKey of item.tags) {
-                    if (!tags.some(tag => tag.value === tagKey)) {
-                        for (const tag of Tags) {
-                            if (tag.value === tagKey) {
-                                tags.push(tag);
-                                break;
-                            }
-                        }
-                        break;
-                    }
-                }
-            }
-
-            return tags;
-        },
-    },
-
-    methods: {
-        getIconByUrl,
-
-        setSort(sort) {
-            setTimeout(() => {
-                const current = this.sortBy;
-                this.sortBy = current !== sort.value ? sort.value : '';
-                this.sortOrder = this.sortBy ? sort.order : '';
-                console.log('sort', sort.label, ':', current, '=>', sort.value, sort.order)
-            }, 100);
-        },
-
-        setFilter(filter, value) {
-            setTimeout(() => {
-                const current = this.filterByValue;
-                this.filterByValue = current !== value ? value : '';
-                this.filterBy = this.filterByValue ? filter.field : '';
-                console.log('filter', filter.field, ':', current, '=>', this.filterByValue)
-            }, 100);
-        },
-
-        clearFilters() {
-            this.sortBy = '';
-            this.sortOrder = '';
-            this.filterBy = '';
-            this.filterByValue = '';
-        },
-
-        showModal(item) {
-            this.selectedItem = item;
-
-            setTimeout(() => {
-                // Swiper
-                const swiper = new Swiper('.swiper', {
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        type: 'bullets',
-                    },
-                    loop: true,
-                    spaceBetween: 0,
-                });
-
-                this.itemModal.show();
-            }, 100);
-        },
-
-        getSortLabel(sortValue) {
-            for (const sort of Sorts) {
-                if (sort.value === sortValue) {
-                    return sort.label;
-                }
-            }
-
-            return 'Ordenação';
-        },
-
-        getFilterLabel(filter) {
-            if (!this.filterBy) {
-                return filter.label;
-            }
-
-            for (const option of filter.options) {
-                if (option.value === this.filterByValue) {
-                    return option.label;
-                }
-            }
-
-            return filter.label;
-        },
-    },
-
-    mounted() {
-        // Modal
-        this.itemModal = new bootstrap.Modal(document.getElementById('itemModal'));
-
-        this.$refs.itemModal.addEventListener('hidden.bs.modal', event => {
-            this.selectedItem = null;
-        });
-    },
-}).mount("#app");
+];

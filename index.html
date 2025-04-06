@@ -5,4 +5,24 @@ vue: true
 swiper: true
 ---
 
-{% include games.html %}
+<!-- Cabeçalho -->
+<div class="alert alert-dark page-content-thin mb-2">
+    <p class="text-center fs-5">
+        <small>{{ site.description }}</small>
+    </p>
+    <div class="alert alert-secondary m-0 p-2" role="alert">
+        <p class="text-center m-0 font-tiny">
+            <small>
+                <strong>Quer ver seu jogo aqui?</strong> Participe do grupo <i>Desenvolvedores de Jogos</i> no
+                <a target="_blank" href="{{ site.data.contact[0].url }}">WhatsApp</a>
+                ou abra um issue no
+                <a target="_blank" href="{{ site.data.contact[2].url }}">GitHub</a>!
+            </small>
+        </p>
+    </div>
+</div>
+
+<!-- Dados da listagem de jogos -->
+<script src="/assets/js/games/data.js"></script>
+
+{% include listing.html %}
