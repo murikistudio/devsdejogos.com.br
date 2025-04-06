@@ -58,12 +58,12 @@
 
                 <div class="card bg-dark text-light rounded-4 shadow h-100">
 
-                    <!-- Images -->
+                    <!-- Imagem -->
                     <div @click="showModal(game)" class="text-decoration-none cursor-pointer d-flex flex-column overflow-hidden">
-                        <img class="rounded-top-4" loading="lazy" :src="game.images[0]" :alt="game.name">
+                        <img class="rounded-top-4" loading="lazy" :src="'/assets/img/games/' + game.directory + '/' + game.images[0]" :alt="game.name">
                     </div>
 
-                    <!-- Body -->
+                    <!-- Informações -->
                     <div class="card-body d-flex flex-column justify-content-between">
                         <div>
                             <h4 @click="showModal(game)" class="card-title mb-0 cursor-pointer" v-text="game.name"></h4>
@@ -77,10 +77,10 @@
                             <small v-html="game.description"></small>
                         </p>
                         <div class="d-inline-flex justify-content-center">
-                            <a v-for="link in game.links" :href="link.url" target="_blank"
+                            <a v-for="link in game.links" :href="link" target="_blank"
                                 class="btn border d-flex justify-content-center align-items-center mx-1"
-                                :class="link.class" style="width: 1.5rem; height: 1.5rem; padding: 4px">
-                                <img :src="'/assets/img/icons/' + link.icon" class="w-100">
+                                :class="getIconByUrl(link).class" style="width: 1.5rem; height: 1.5rem; padding: 4px">
+                                <img :src="'/assets/img/icons/' + getIconByUrl(link).icon" class="w-100">
                             </a>
                         </div>
                     </div>
@@ -101,7 +101,7 @@
                     <div class="swiper-wrapper">
                         <div v-for="image in selectedGame?.images" class="swiper-slide">
                             <div class="text-decoration-none d-flex flex-column overflow-hidden">
-                                <img class="" loading="lazy" :src="image" :alt="image">
+                                <img class="" loading="lazy" :src="'/assets/img/games/' + selectedGame.directory + '/' + image" :alt="image">
                             </div>
                         </div>
                     </div>
