@@ -172,17 +172,17 @@ const Genres = [
 // Ordenações de jogos
 const Sorts = [
     {
-        label: 'Adicionado em',
+        label: 'Mais Recentes',
         value: 'date_added',
         order: 'desc',
     },
     {
-        label: 'Nome do Jogo',
+        label: 'Nome (A-Z)',
         value: 'name',
         order: 'asc',
     },
     {
-        label: 'Desenvolvedor',
+        label: 'Autor (A-Z)',
         value: 'author_name',
         order: 'asc',
     },
@@ -196,7 +196,7 @@ const Filters = [
         options: 'genres',
     },
     {
-        label: 'Desenvolvedor',
+        label: 'Autor',
         field: 'author_name',
         options: 'authors',
     },

@@ -1,8 +1,27 @@
 <!-- Template -->
 <div id="app" class="text-light">
-    <p class="text-center mb-4">{{ site.description }}</p>
 
+    <!-- Cabeçalho -->
+    <div class="alert alert-dark page-content-thin mb-4">
+        <p class="text-center fs-5">
+            <small>{{ site.description }}</small>
+        </p>
+        <div class="alert alert-secondary m-0 p-2" role="alert">
+            <p class="text-center m-0" style="font-size: 80%;">
+                <small>
+                    <strong>Quer ver seu jogo aqui?</strong> Participe do grupo <i>Desenvolvedores de Jogos</i> no
+                    <a target="_blank" href="{{ site.data.contact[0].url }}">WhatsApp</a>
+                    ou abra um issue no
+                    <a target="_blank" href="{{ site.data.contact[2].url }}">GitHub</a>!
+                </small>
+            </p>
+        </div>
+    </div>
+
+    <!-- Listagem -->
     <div class="container text-center">
+
+        <!-- Filtros -->
         <div class="d-inline-flex justify-content-between">
 
             <!-- Ordenar -->
