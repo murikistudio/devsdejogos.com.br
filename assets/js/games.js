@@ -48,7 +48,7 @@ const Games = [
         directory: 'defendants',
         genres: ['casual', 'arcade'],
         author_name: 'Snakegbr',
-        author_url: 'https://murikistudio.com.br/',
+        author_url: 'https://www.instagram.com/snakegbr',
         date_added: '2023-04-05 19:00',
         description: 'A jogabilidade lembra o clássico jogo Snake: conforme você coleta folhas, sua formiga cresce mais, tornando cada vez mais desafiador navegar pelo espaço sem colidir consigo mesma ou com as bordas.',
         images: [
