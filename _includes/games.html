@@ -7,7 +7,7 @@
             <small>{{ site.description }}</small>
         </p>
         <div class="alert alert-secondary m-0 p-2" role="alert">
-            <p class="text-center m-0" style="font-size: 80%;">
+            <p class="text-center m-0 font-tiny">
                 <small>
                     <strong>Quer ver seu jogo aqui?</strong> Participe do grupo <i>Desenvolvedores de Jogos</i> no
                     <a target="_blank" href="{{ site.data.contact[0].url }}">WhatsApp</a>
@@ -73,32 +73,30 @@
         </div>
 
         <div class="row justify-content-md-center">
-            <div v-for="game in games" class="col-md-6 col-lg-4 col-xl-3 col justify-content-center my-3">
+            <div v-for="item in items" class="col-md-6 col-lg-4 col-xl-3 col justify-content-center my-3">
 
                 <div class="card bg-dark text-light rounded-4 shadow h-100">
 
                     <!-- Imagem -->
-                    <div @click="showModal(game)" class="text-decoration-none cursor-pointer d-flex flex-column overflow-hidden">
-                        <img class="rounded-top-4" loading="lazy" :src="'/assets/img/games/' + game.directory + '/' + game.images[0]" :alt="game.name">
+                    <div @click="showModal(item)" class="text-decoration-none cursor-pointer d-flex flex-column overflow-hidden">
+                        <img class="rounded-top-4" loading="lazy" :src="'/assets/img/' + item.directory + '/' + item.images[0]" :alt="item.name">
                     </div>
 
                     <!-- Informações -->
                     <div class="card-body d-flex flex-column justify-content-between">
-                        <div>
-                            <h4 @click="showModal(game)" class="card-title mb-0 cursor-pointer" v-text="game.name"></h4>
-                            <p class="mb-3">
-                                <small class="text-muted">
-                                    (Por: <a target="_blank" :href="game.author_url" v-text="game.author_name"></a>)
-                                </small>
+                        <div class="mb-3">
+                            <h4 @click="showModal(item)" class="card-title mb-0 cursor-pointer" v-text="item.name"></h4>
+                            <p v-if="item.author_name && item.author_url" class="my-1 text-muted font-tiny">
+                                (Por: <a target="_blank" :href="item.author_url" v-text="item.author_name"></a>)
+                            </p>
+                            <p @click="showModal(item)" class="card-text mt-3 cursor-pointer font-tiny">
+                                <span v-html="item.description"></span>
                             </p>
                         </div>
-                        <p @click="showModal(game)" class="card-text mb-4 cursor-pointer">
-                            <small v-html="game.description"></small>
-                        </p>
                         <div class="d-inline-flex justify-content-center">
-                            <a v-for="link in game.links" :href="link" target="_blank"
-                                class="btn border d-flex justify-content-center align-items-center mx-1"
-                                :class="getIconByUrl(link).class" style="width: 1.5rem; height: 1.5rem; padding: 4px">
+                            <a v-for="link in item.links" :href="link" target="_blank"
+                                class="btn d-flex justify-content-center align-items-center mx-2"
+                                style="width: 1.5rem; height: 1.5rem; padding: 3px">
                                 <img :src="'/assets/img/icons/' + getIconByUrl(link).icon" class="w-100">
                             </a>
                         </div>
@@ -109,18 +107,18 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="gameModal" ref="gameModal" tabindex="-1" aria-labelledby="gameModalLabel">
+    <div class="modal fade" id="itemModal" ref="itemModal" tabindex="-1" aria-labelledby="itemModalLabel">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div v-if="selectedGame" class="modal-content">
+        <div v-if="selectedItem" class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-3 mb-0 w-100 text-center" id="gameModalLabel" v-text="selectedGame?.name"></h1>
+                <h1 class="modal-title fs-3 mb-0 w-100 text-center" id="itemModalLabel" v-text="selectedItem?.name"></h1>
             </div>
             <div class="modal-body">
                 <div class="swiper w-100 rounded-4">
                     <div class="swiper-wrapper">
-                        <div v-for="image in selectedGame?.images" class="swiper-slide">
+                        <div v-for="image in selectedItem?.images" class="swiper-slide">
                             <div class="text-decoration-none d-flex flex-column overflow-hidden">
-                                <img class="" loading="lazy" :src="'/assets/img/games/' + selectedGame.directory + '/' + image" :alt="image">
+                                <img class="" loading="lazy" :src="'/assets/img/' + selectedItem.directory + '/' + image" :alt="image">
                             </div>
                         </div>
                     </div>
@@ -128,7 +126,7 @@
                 </div>
 
                 <div class="mt-4">
-                    <p v-html="selectedGame?.description"></p>
+                    <p v-html="selectedItem?.description"></p>
                 </div>
             </div>
             <div class="modal-footer">

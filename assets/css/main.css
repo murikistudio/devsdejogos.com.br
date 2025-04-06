@@ -150,3 +150,7 @@ li.nav-item:not(:last-child) {
 .hover:hover {
     filter: brightness(1.2);
 }
+
+.font-tiny {
+    font-size: 80% !important;
+}

@@ -1,9 +1,9 @@
 // Definições de jogos
-const Games = [
+const Data = [
     {
         name: 'Birds Adventure',
-        directory: 'birdsadventure',
-        genres: ['action', 'adventure', 'casual'],
+        directory: 'games/birdsadventure',
+        tags: ['action', 'adventure', 'casual'],
         author_name: 'Vinicius Oliveira',
         author_url: 'https://www.facebook.com/profile.php?id=100006857140925',
         date_added: '2023-04-05 20:00',
@@ -24,8 +24,8 @@ const Games = [
     },
     {
         name: 'Christmas Smash',
-        directory: 'christmassmash',
-        genres: ['action', 'arcade', 'rpg'],
+        directory: 'games/christmassmash',
+        tags: ['action', 'arcade', 'rpg'],
         author_name: 'ArcadeNightmare',
         author_url: 'https://store.steampowered.com/app/2308050/Christmas_Smash/',
         date_added: '2023-04-05 17:00',
@@ -45,8 +45,8 @@ const Games = [
     },
     {
         name: 'DefendAnts',
-        directory: 'defendants',
-        genres: ['casual', 'arcade'],
+        directory: 'games/defendants',
+        tags: ['casual', 'arcade'],
         author_name: 'Snakegbr',
         author_url: 'https://www.instagram.com/snakegbr',
         date_added: '2023-04-05 19:00',
@@ -64,8 +64,8 @@ const Games = [
     },
     {
         name: 'Mole Maniacs',
-        directory: 'molemaniacs',
-        genres: ['casual', 'arcade'],
+        directory: 'games/molemaniacs',
+        tags: ['casual', 'arcade'],
         author_name: 'Muriki Studio',
         author_url: 'https://murikistudio.com.br/',
         date_added: '2023-04-03 20:00',
@@ -86,8 +86,8 @@ const Games = [
     },
     {
         name: 'The Criminal Code Brasil',
-        directory: 'thecriminalcodebrasil',
-        genres: ['action', 'arcade', 'adventure', 'rpg'],
+        directory: 'games/thecriminalcodebrasil',
+        tags: ['action', 'arcade', 'adventure', 'rpg'],
         author_name: 'Yuri Heinz Games',
         author_url: 'https://linktr.ee/yuriheinz',
         date_added: '2023-04-04 15:00',
@@ -106,8 +106,8 @@ const Games = [
     },
     {
         name: 'Zombies & Bullets',
-        directory: 'zombiesandbullets',
-        genres: ['action', 'adventure'],
+        directory: 'games/zombiesandbullets',
+        tags: ['action', 'adventure'],
         author_name: 'Muriki Studio',
         author_url: 'https://murikistudio.com.br/',
         date_added: '2023-04-03 19:00',
@@ -130,7 +130,7 @@ const Games = [
 ];
 
 // Gêneros de jogos
-const Genres = [
+const Tags = [
     {
         label: 'Ação',
         value: 'action',
@@ -192,8 +192,8 @@ const Sorts = [
 const Filters = [
     {
         label: 'Gênero',
-        field: 'genres',
-        options: 'genres',
+        field: 'tags',
+        options: 'tags',
     },
     {
         label: 'Autor',
@@ -208,8 +208,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            selectedGame: null,
-            gameModal: null,
+            selectedItem: null,
+            itemModal: null,
             sortBy: Sorts[0].value,
             sortOrder: Sorts[0].order,
             filterBy: '',
@@ -218,23 +218,23 @@ createApp({
     },
 
     computed: {
-        games() {
-            let games = [...Games];
+        items() {
+            let items = [...Data];
 
             if (this.filterBy && this.filterByValue) {
-                games = games.filter((game) => {
-                    const game_field = game[this.filterBy];
+                items = items.filter((item) => {
+                    const item_field = item[this.filterBy];
 
-                    if (Array.isArray(game_field)) {
-                        return game_field.some(genre => genre === this.filterByValue);
+                    if (Array.isArray(item_field)) {
+                        return item_field.some(tag => tag === this.filterByValue);
                     }
 
-                    return game[this.filterBy] === this.filterByValue;
+                    return item[this.filterBy] === this.filterByValue;
                 });
             }
 
             if (this.sortBy) {
-                games = games.sort((a, b) => {
+                items = items.sort((a, b) => {
                     const valA = a[this.sortBy];
                     const valB = b[this.sortBy];
 
@@ -246,7 +246,7 @@ createApp({
                 });
             }
 
-            return games;
+            return items;
         },
 
         sorts() {
@@ -270,11 +270,11 @@ createApp({
         authors() {
             const authors = [];
 
-            for (const game of Games) {
-                if (!authors.some(author => author.value === game.author_name)) {
+            for (const item of Data) {
+                if (!authors.some(author => author.value === item.author_name)) {
                     authors.push({
-                        label: game.author_name,
-                        value: game.author_name,
+                        label: item.author_name,
+                        value: item.author_name,
                     });
                 }
             }
@@ -284,15 +284,15 @@ createApp({
             return authors;
         },
 
-        genres() {
-            const genres = [];
+        tags() {
+            const tags = [];
 
-            for (const game of Games) {
-                for (const genreKey of game.genres) {
-                    if (!genres.some(genre => genre.value === genreKey)) {
-                        for (const genre of Genres) {
-                            if (genre.value === genreKey) {
-                                genres.push(genre);
+            for (const item of Data) {
+                for (const tagKey of item.tags) {
+                    if (!tags.some(tag => tag.value === tagKey)) {
+                        for (const tag of Tags) {
+                            if (tag.value === tagKey) {
+                                tags.push(tag);
                                 break;
                             }
                         }
@@ -301,7 +301,7 @@ createApp({
                 }
             }
 
-            return genres;
+            return tags;
         },
     },
 
@@ -333,8 +333,8 @@ createApp({
             this.filterByValue = '';
         },
 
-        showModal(game) {
-            this.selectedGame = game;
+        showModal(item) {
+            this.selectedItem = item;
 
             setTimeout(() => {
                 // Swiper
@@ -351,17 +351,17 @@ createApp({
                     spaceBetween: 0,
                 });
 
-                this.gameModal.show();
+                this.itemModal.show();
             }, 100);
         },
     },
 
     mounted() {
         // Modal
-        this.gameModal = new bootstrap.Modal(document.getElementById('gameModal'));
+        this.itemModal = new bootstrap.Modal(document.getElementById('itemModal'));
 
-        this.$refs.gameModal.addEventListener('hidden.bs.modal', event => {
-            this.selectedGame = null;
+        this.$refs.itemModal.addEventListener('hidden.bs.modal', event => {
+            this.selectedItem = null;
         });
     },
 }).mount("#app");
