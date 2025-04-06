@@ -3,7 +3,7 @@
   show_in_nav: true
 - title: "Influenciadores"
   url: "influenciadores"
-  show_in_nav: false
+  show_in_nav: true
 - title: "Sobre"
   url: "sobre"
   show_in_nav: true
