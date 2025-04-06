@@ -4,26 +4,26 @@
  */
 function getIconByUrl(url) {
     if (url.includes('discord')) {
-        return {icon: 'discord.svg', class: 'bg-primary'};
+        return {icon: 'discord.svg', class: 'bg-primary', name: 'Discord'};
     } else if (url.includes('facebook')) {
-        return {icon: 'facebook.svg', class: 'bg-primary'};
+        return {icon: 'facebook.svg', class: 'bg-primary', name: 'Facebook'};
     } else if (url.includes('gamejolt')) {
-        return {icon: 'gamejolt.svg', class: 'bg-black'};
+        return {icon: 'gamejolt.svg', class: 'bg-black', name: 'Game Jolt'};
     } else if (url.includes('play.google')) {
-        return {icon: 'googleplay.svg', class: 'bg-light'};
+        return {icon: 'googleplay.svg', class: 'bg-light', name: 'Google Play'};
     } else if (url.includes('instagram')) {
-        return {icon: 'instagram.svg', class: 'bg-danger'};
+        return {icon: 'instagram.svg', class: 'bg-danger', name: 'Instagram'};
     } else if (url.includes('steam')) {
-        return {icon: 'steam.svg', class: 'bg-primary-subtle'};
+        return {icon: 'steam.svg', class: 'bg-primary-subtle', name: 'Steam'};
     } else if (url.includes('tiktok')) {
-        return {icon: 'tiktok.svg', class: 'bg-black'};
+        return {icon: 'tiktok.svg', class: 'bg-black', name: 'TikTok'};
     } else if (url.includes('twitter')) {
-        return {icon: 'twitter.svg', class: 'bg-info'};
+        return {icon: 'twitter.svg', class: 'bg-info', name: 'Twitter'};
     }  else if (url.includes('x.com')) {
-        return {icon: 'x.svg', class: 'bg-black'};
+        return {icon: 'x.svg', class: 'bg-black', name: 'X'};
     } else if (url.includes('youtube')) {
-        return {icon: 'youtube.svg', class: 'bg-danger'};
+        return {icon: 'youtube.svg', class: 'bg-danger', name: 'YouTube'};
     } else {
-        return {icon: 'external.svg', class: 'bg-black'};
+        return {icon: 'external.svg', class: 'bg-black', name: url.split('//', 2).pop()};
     }
 }

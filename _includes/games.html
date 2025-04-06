@@ -94,7 +94,7 @@
                             </p>
                         </div>
                         <div class="d-inline-flex justify-content-center">
-                            <a v-for="link in item.links" :href="link" target="_blank"
+                            <a v-for="link in item.links" :href="link" target="_blank" :title="getIconByUrl(link).name"
                                 class="btn d-flex justify-content-center align-items-center mx-2"
                                 style="width: 1.5rem; height: 1.5rem; padding: 3px">
                                 <img :src="'/assets/img/icons/' + getIconByUrl(link).icon" class="w-100">
