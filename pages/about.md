@@ -21,6 +21,10 @@ Esse é o seu lugar se você desenvolve ou gosta de jogos indie!</p>
 
 <p>Participe do nosso grupo e tenha seu jogo listado aqui, entre em contato com a gente!</p>
 
+<ul>
 {% for contact in site.data.contact -%}
-- [{{ contact.name }}]({{ contact.url }})
+    <li>
+        <a target="_blank" href="{{ contact.url }}">{{ contact.name }}</a>
+    </li>
 {% endfor %}
+</ul>
