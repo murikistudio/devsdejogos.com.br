@@ -7,7 +7,7 @@ document.ListingData = [
         tags: ['youtube'],
         author_name: 'Yatsura Games',
         author_url: 'https://www.youtube.com/@yatsuragames',
-        date_added: '2023-04-06 17:00',
+        date_added: '2025-04-06 17:00',
         short_description: '<strong>Yatsura Games</strong> é um canal voltado para jogos de todas as plataformas, onde você irá encontrar dicas de jogos, detonados e gameplays do mundo dos games de forma geral,  o canal contará com vídeos casuais de jogos de gerações passadas e atuais.',
         images: [
             'screenshot-1.webp',

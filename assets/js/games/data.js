@@ -7,7 +7,7 @@ document.ListingData = [
         tags: ['action', 'adventure', 'casual'],
         author_name: 'Vinicius Oliveira',
         author_url: 'https://www.facebook.com/profile.php?id=100006857140925',
-        date_added: '2023-04-05 20:00',
+        date_added: '2025-04-05 20:00',
         short_description: 'Embarque em uma jornada emocionante com <strong>Flynn</strong>, um pássaro corajoso cuja vida pacífica é interrompida quando seu filho é capturado. Determinado a recuperá-lo, <strong>Flynn</strong> mergulha em uma busca perigosa através de terras deslumbrantes e repletas de perigos.',
         images: [
             'screenshot-1.webp',
@@ -30,7 +30,7 @@ document.ListingData = [
         tags: ['action', 'arcade', 'rpg'],
         author_name: 'ArcadeNightmare',
         author_url: 'https://store.steampowered.com/app/2308050/Christmas_Smash/',
-        date_added: '2023-04-05 17:00',
+        date_added: '2025-04-05 17:00',
         short_description: '<strong>Papai Noel</strong> embarca em uma missão: derrote Krampus e seu exercito de elfos renegados. Uma aventura explosiva e cheia de ação! em um jogo de tiro com vista de cima.',
         images: [
             'screenshot-1.webp',
@@ -52,7 +52,7 @@ document.ListingData = [
         tags: ['casual', 'arcade'],
         author_name: 'Snakegbr',
         author_url: 'https://www.instagram.com/snakegbr',
-        date_added: '2023-04-05 19:00',
+        date_added: '2025-04-05 19:00',
         short_description: 'A jogabilidade lembra o clássico jogo Snake: conforme você coleta folhas, sua formiga cresce mais, tornando cada vez mais desafiador navegar pelo espaço sem colidir consigo mesma ou com as bordas.',
         images: [
             'screenshot-1.webp',
@@ -72,7 +72,7 @@ document.ListingData = [
         tags: ['horror', 'puzzle'],
         author_name: 'Sicha GameDev',
         author_url: 'https://linktr.ee/sicha.gamedev',
-        date_added: '2023-04-06 22:00',
+        date_added: '2025-04-06 22:00',
         short_description: 'Este é Flashlight, meu primeiro jogo DEMO. Usei um tema de metrô pós-apocalíptico para criar o cenário e um visual sombrio e cheio de suspense. É um jogo gratuito sem fins lucrativos.',
         images: [
             'screenshot-1.webp',
@@ -100,7 +100,7 @@ document.ListingData = [
         tags: ['arcade', 'casual'],
         author_name: 'NeoTrons Games',
         author_url: 'https://gabrielbarberiz.notion.site/',
-        date_added: '2023-04-06 23:00',
+        date_added: '2025-04-06 23:00',
         short_description: 'Corra com seu lenhador favorito e destrua os Monstros-Árvore que aparecerem. Derrube monstros com seu machado, colete moedas, desvie de obstáculos e fique vivo o máximo de tempo possível.',
         images: [
             'screenshot-1.webp',
@@ -119,7 +119,7 @@ document.ListingData = [
         tags: ['casual', 'arcade', 'adventure'],
         author_name: 'Muriki Studio',
         author_url: 'https://murikistudio.com.br/',
-        date_added: '2023-04-03 20:00',
+        date_added: '2025-04-03 20:00',
         short_description: '<strong>Mole Maniacs</strong> é um jogo estilo Whack-A-Mole! Complete missões em diferentes níveis, acerte as toupeiras, colete moedas para comprar novos martelos, não deixe sua barra de energia chegar a zero!',
         images: [
             'screenshot-1.webp',
@@ -142,7 +142,7 @@ document.ListingData = [
         tags: ['action', 'arcade', 'adventure', 'rpg'],
         author_name: 'Yuri Heinz Games',
         author_url: 'https://linktr.ee/yuriheinz',
-        date_added: '2023-04-04 15:00',
+        date_added: '2025-04-04 15:00',
         short_description: 'The Criminal Code: Brasil é um jogo de ação em mundo aberto onde você sobrevive no coração da criminalidade urbana, enfrentando polícia, rivais e o próprio destino nas ruas do Brasil.',
         images: [
             'screenshot-1.jpg',
@@ -163,7 +163,7 @@ document.ListingData = [
         tags: ['action', 'adventure'],
         author_name: 'Muriki Studio',
         author_url: 'https://murikistudio.com.br/',
-        date_added: '2023-04-03 19:00',
+        date_added: '2025-04-03 19:00',
         short_description: '<strong>Zombies & Bullets</strong> é um jogo de tiro de ação top-down 3D onde você deve ajudar o soldado Jacob a enfrentar exércitos de zumbis em ambientes variados e desafiadores.',
         images: [
             'screenshot-1.webp',
