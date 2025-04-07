@@ -153,3 +153,11 @@ li.nav-item:not(:last-child) {
 .font-tiny {
     font-size: 80% !important;
 }
+
+.badge-item-new {
+    position: absolute;
+    font-size: 0.7rem !important;
+    top: 6px;
+    left: 6px;
+    z-index: 1;
+}

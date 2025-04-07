@@ -60,12 +60,19 @@
     <div class="container text-center mt-2">
 
         <div class="row justify-content-md-center">
+
+            <!-- Item -->
             <div v-for="item in items" class="col-md-6 col-lg-4 col-xl-3 col justify-content-center my-3">
 
                 <div class="card bg-dark text-light rounded-4 shadow h-100">
 
                     <!-- Imagem -->
                     <div @click="showModal(item)" class="text-decoration-none cursor-pointer d-flex flex-column overflow-hidden">
+
+                        <!-- Etiqueta de Novo -->
+                        <span v-if="isDateLessThanDaysAgo(item.date_added, 7)" v-text="'NOVO!'" :title="formatDate(item.date_added)"
+                            class="badge bg-success badge-item-new bg-gradient border border-white px-2 py-1 cursor-pointer"></span>
+
                         <img class="rounded-top-4" loading="lazy" :src="'/assets/img/' + item.directory + '/' + item.images[0]" :alt="item.name">
                     </div>
 
@@ -73,9 +80,11 @@
                     <div class="card-body d-flex flex-column justify-content-between">
                         <div class="mb-3">
                             <h4 @click="showModal(item)" class="card-title mb-0 cursor-pointer" v-text="item.name"></h4>
+
                             <p v-if="item.author_name && item.author_url" class="my-1 text-muted font-tiny">
                                 (Por: <a target="_blank" :href="item.author_url" v-text="item.author_name"></a>)
                             </p>
+
                             <p @click="showModal(item)" class="card-text mt-3 cursor-pointer font-tiny">
                                 <span v-html="item.short_description"></span>
                             </p>
