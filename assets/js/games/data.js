@@ -63,6 +63,33 @@ document.ListingData = [
         ],
     },
     {
+        name: 'Flashlight',
+        directory: 'games/flashlight',
+        tags: ['horror', 'puzzle'],
+        author_name: 'Sicha GameDev',
+        author_url: 'https://linktr.ee/sicha.gamedev',
+        date_added: '2023-04-06 22:00',
+        short_description: 'Este é Flashlight, meu primeiro jogo DEMO. Usei um tema de metrô pós-apocalíptico para criar o cenário e um visual sombrio e cheio de suspense. É um jogo gratuito sem fins lucrativos.',
+        images: [
+            'screenshot-1.webp',
+            'screenshot-2.webp',
+            'screenshot-3.webp',
+            'screenshot-4.webp',
+            'screenshot-5.webp',
+            'screenshot-6.webp',
+            'screenshot-7.webp',
+            'screenshot-8.webp',
+            'screenshot-9.webp',
+        ],
+        links: [
+            'https://linktr.ee/sicha.gamedev',
+            'https://sichagamedev.itch.io/',
+            'https://www.youtube.com/@SichaGameDev',
+            'https://www.instagram.com/sicha.gamedev',
+            'https://www.linkedin.com/in/sicha-gamedev/',
+        ],
+    },
+    {
         name: 'Mole Maniacs',
         directory: 'games/molemaniacs',
         tags: ['casual', 'arcade'],
@@ -158,6 +185,14 @@ document.ListingTags = [
     {
         label: 'Estratégia',
         value: 'strategy',
+    },
+    {
+        label: 'Horror',
+        value: 'horror',
+    },
+    {
+        label: 'Puzzle',
+        value: 'puzzle',
     },
     {
         label: 'RPG',
