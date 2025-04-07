@@ -147,9 +147,9 @@ document.ListingData = [
         date_added: '2025-04-04 15:00',
         short_description: 'The Criminal Code: Brasil é um jogo de ação em mundo aberto onde você sobrevive no coração da criminalidade urbana, enfrentando polícia, rivais e o próprio destino nas ruas do Brasil.',
         images: [
-            'screenshot-1.jpg',
-            'screenshot-2.jpg',
-            'screenshot-3.jpg',
+            'screenshot-1.webp',
+            'screenshot-2.webp',
+            'screenshot-3.webp',
         ],
         links: [
             'https://linktr.ee/yuriheinz',
