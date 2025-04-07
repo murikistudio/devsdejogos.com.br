@@ -2,6 +2,7 @@
 document.ListingData = [
     {
         name: 'Yatsura Games',
+        id: 'yatsuragames',
         directory: 'influenciadores/yatsuragames',
         tags: ['youtube'],
         author_name: 'Yatsura Games',

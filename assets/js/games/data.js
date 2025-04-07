@@ -2,6 +2,7 @@
 document.ListingData = [
     {
         name: 'Birds Adventure',
+        id: 'birdsadventure',
         directory: 'games/birdsadventure',
         tags: ['action', 'adventure', 'casual'],
         author_name: 'Vinicius Oliveira',
@@ -24,6 +25,7 @@ document.ListingData = [
     },
     {
         name: 'Christmas Smash',
+        id: 'christmassmash',
         directory: 'games/christmassmash',
         tags: ['action', 'arcade', 'rpg'],
         author_name: 'ArcadeNightmare',
@@ -45,6 +47,7 @@ document.ListingData = [
     },
     {
         name: 'DefendAnts',
+        id: 'defendants',
         directory: 'games/defendants',
         tags: ['casual', 'arcade'],
         author_name: 'Snakegbr',
@@ -64,6 +67,7 @@ document.ListingData = [
     },
     {
         name: 'Flashlight',
+        id: 'flashlight',
         directory: 'games/flashlight',
         tags: ['horror', 'puzzle'],
         author_name: 'Sicha GameDev',
@@ -91,6 +95,7 @@ document.ListingData = [
     },
     {
         name: 'Mole Maniacs',
+        id: 'molemaniacs',
         directory: 'games/molemaniacs',
         tags: ['casual', 'arcade'],
         author_name: 'Muriki Studio',
@@ -113,6 +118,7 @@ document.ListingData = [
     },
     {
         name: 'The Criminal Code Brasil',
+        id: 'thecriminalcodebrasil',
         directory: 'games/thecriminalcodebrasil',
         tags: ['action', 'arcade', 'adventure', 'rpg'],
         author_name: 'Yuri Heinz Games',
@@ -133,6 +139,7 @@ document.ListingData = [
     },
     {
         name: 'Zombies & Bullets',
+        id: 'zombiesandbullets',
         directory: 'games/zombiesandbullets',
         tags: ['action', 'adventure'],
         author_name: 'Muriki Studio',

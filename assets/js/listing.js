@@ -140,6 +140,7 @@ createApp({
 
         showModal(item) {
             this.selectedItem = item;
+            window.location.hash = item.id || '';
 
             setTimeout(() => {
                 // Swiper
@@ -194,6 +195,20 @@ createApp({
 
         this.$refs.itemModal.addEventListener('hidden.bs.modal', event => {
             this.selectedItem = null;
+            window.location.hash = '';
         });
+
+        const hash = window.location.hash?.trim();
+
+        if (hash && hash.length > 1) {
+            const itemId = hash.substring(1).trim();
+
+            for (const item of this.items) {
+                if (item.id === itemId) {
+                    this.showModal(item);
+                    break;
+                }
+            }
+        }
     },
 }).mount("#app");
