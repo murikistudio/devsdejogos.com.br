@@ -10,7 +10,7 @@ function getIconByUrl(url) {
     } else if (url.includes('gamejolt')) {
         return {icon: 'gamejolt.svg', class: 'bg-black', name: 'Game Jolt'};
     } else if (url.includes('play.google')) {
-        return {icon: 'googleplay.svg', class: 'bg-light', name: 'Google Play'};
+        return {icon: 'googleplay.svg', class: 'bg-success', name: 'Google Play'};
     } else if (url.includes('instagram')) {
         return {icon: 'instagram.svg', class: 'bg-danger', name: 'Instagram'};
     } else if (url.includes('itch.io')) {

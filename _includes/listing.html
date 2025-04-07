@@ -112,12 +112,25 @@
                     <div class="swiper-pagination"></div>
                 </div>
 
-                <div class="mt-4">
+                <p v-if="selectedItem.author_name && selectedItem.author_url" class="mt-2 mb-0 text-muted text-center">
+                    (Por: <a target="_blank" :href="selectedItem.author_url" v-text="selectedItem.author_name"></a>)
+                </p>
+
+                <div class="mt-2">
                     <p v-html="selectedItem?.short_description"></p>
+                </div>
+
+                <div class="d-inline-flex justify-content-center w-100 mt-3">
+                    <a v-for="link in selectedItem.links" :href="link" target="_blank" :title="getIconByUrl(link).name"
+                        class="btn d-flex justify-content-center align-items-center mx-2"
+                        :class="getIconByUrl(link).class"
+                        style="width: 2.5rem; height: 2.5rem; padding: 3px">
+                        <img :src="'/assets/img/icons/' + getIconByUrl(link).icon" class="w-100">
+                    </a>
                 </div>
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
             </div>
         </div>
         </div>
