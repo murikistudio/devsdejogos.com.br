@@ -12,7 +12,7 @@ function getIconByUrl(url) {
     } else if (url.includes('play.google')) {
         return {icon: 'googleplay.svg', class: 'bg-success', name: 'Google Play'};
     } else if (url.includes('instagram')) {
-        return {icon: 'instagram.svg', class: 'bg-danger', name: 'Instagram'};
+        return {icon: 'instagram.svg', class: 'bg-danger bg-gradient', name: 'Instagram'};
     } else if (url.includes('itch.io')) {
         return {icon: 'itchio.svg', class: 'bg-danger', name: 'itch.io'};
     } else if (url.includes('linkedin')) {
@@ -28,6 +28,6 @@ function getIconByUrl(url) {
     } else if (url.includes('youtube')) {
         return {icon: 'youtube.svg', class: 'bg-danger', name: 'YouTube'};
     } else {
-        return {icon: 'external.svg', class: 'bg-black', name: url.split('//', 2).pop()};
+        return {icon: 'external.svg', class: 'bg-secondary bg-gradient', name: url.split('//', 2).pop()};
     }
 }
