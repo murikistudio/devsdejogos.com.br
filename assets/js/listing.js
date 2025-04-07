@@ -195,7 +195,7 @@ createApp({
 
         this.$refs.itemModal.addEventListener('hidden.bs.modal', event => {
             this.selectedItem = null;
-            window.location.hash = '';
+            history.pushState(null, null, window.location.href.split('#')[0]);
         });
 
         const hash = window.location.hash?.trim();
