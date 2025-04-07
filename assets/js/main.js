@@ -13,6 +13,10 @@ function getIconByUrl(url) {
         return {icon: 'googleplay.svg', class: 'bg-light', name: 'Google Play'};
     } else if (url.includes('instagram')) {
         return {icon: 'instagram.svg', class: 'bg-danger', name: 'Instagram'};
+    } else if (url.includes('itch.io')) {
+        return {icon: 'itchio.svg', class: 'bg-danger', name: 'itch.io'};
+    } else if (url.includes('linkedin')) {
+        return {icon: 'linkedin.svg', class: 'bg-primary', name: 'LinkedIn'};
     } else if (url.includes('steam')) {
         return {icon: 'steam.svg', class: 'bg-primary-subtle', name: 'Steam'};
     } else if (url.includes('tiktok')) {
