@@ -161,3 +161,11 @@ li.nav-item:not(:last-child) {
     left: 6px;
     z-index: 1;
 }
+
+.hover {
+    transition: filter 0.2s !important;
+}
+
+.hover:hover {
+    filter: brightness(1.2) !important;
+}
