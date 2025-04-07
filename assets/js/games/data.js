@@ -94,7 +94,7 @@ document.ListingData = [
         ],
     },
     {
-        name: 'Lumber Runner: Infinity Run',
+        name: 'Lumber Runner',
         id: 'lumberrunner',
         directory: 'games/lumberrunner',
         tags: ['arcade', 'casual'],
