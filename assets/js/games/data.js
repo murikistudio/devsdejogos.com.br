@@ -110,6 +110,8 @@ document.ListingData = [
         links: [
             'https://play.google.com/store/apps/details?id=com.NeotronsGames.LumberRunner',
             'https://gabrielbarberiz.notion.site/',
+            'https://barberiz.itch.io/',
+            'https://www.linkedin.com/in/gabriel-barberiz-209319219/',
         ],
     },
     {
