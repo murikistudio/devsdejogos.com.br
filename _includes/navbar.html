@@ -14,7 +14,9 @@
                 {% if section.show_in_nav %}
                 <li class="nav-item px-0 py-0">
                     <a class="nav-link px-0 py-0 text-white" href="{{ site.url }}/{{ section.url }}">
-                        <small>{{ section.title }}</small>
+                        <small>
+                            <strong>{{ section.title }}</strong>
+                        </small>
                     </a>
                 </li>
                 {% endif %}
