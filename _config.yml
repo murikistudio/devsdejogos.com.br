@@ -28,6 +28,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://devsdejogos.com.br" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  murikistudio
 github_repo:  devsdejogos.com.br
+author: Joel Gomes
+author_url: https://www.linkedin.com/in/joelgomesdasilva/
 
 # Build settings
 theme:
