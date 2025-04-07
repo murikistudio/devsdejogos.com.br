@@ -94,15 +94,14 @@ createApp({
             const tags = [];
 
             for (const item of (document.ListingData ?? [])) {
-                for (const tagKey of item.tags) {
-                    if (!tags.some(tag => tag.value === tagKey)) {
+                for (const tagValue of item.tags) {
+                    if (!tags.some(tag => tag.value === tagValue)) {
                         for (const tag of (document.ListingTags || [])) {
-                            if (tag.value === tagKey) {
+                            if (tag.value === tagValue) {
                                 tags.push(tag);
                                 break;
                             }
                         }
-                        break;
                     }
                 }
             }
@@ -187,8 +186,9 @@ createApp({
     },
 
     mounted() {
-        this.sortBy = this.sorts?.length > 0 ? this.sorts[0]?.value : ''
-        this.sortOrder = this.sorts?.length > 0 ? this.sorts[0]?.order : ''
+        this.sortBy = this.sorts?.length > 0 ? this.sorts[0]?.value : '';
+        this.sortOrder = this.sorts?.length > 0 ? this.sorts[0]?.order : '';
+
         // Modal
         this.itemModal = new bootstrap.Modal(document.getElementById('itemModal'));
 
