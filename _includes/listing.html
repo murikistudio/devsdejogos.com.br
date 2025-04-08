@@ -106,7 +106,7 @@
     <div class="modal fade" id="itemModal" ref="itemModal" tabindex="-1" aria-labelledby="itemModalLabel">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" style="max-width: 800px;">
         <div v-if="selectedItem" class="modal-content">
-            <div class="modal-header p-1">
+            <div class="modal-header p-2">
                 <h1 class="modal-title fs-3 mb-0 w-100 text-center" id="itemModalLabel" v-text="selectedItem?.name"></h1>
             </div>
             <div class="modal-body">
@@ -129,11 +129,9 @@
                     <p v-html="selectedItem?.short_description"></p>
                 </div>
 
-                <hr class="my-4">
+                <h5 class="text-center mt-4">Acesse agora em:</h5>
 
-                <h5 class="text-center mt-2">Acesse agora em:</h5>
-
-                <div class="d-inline-flex justify-content-center w-100 mt-2">
+                <div class="d-inline-flex justify-content-center w-100 mt-3 mb-3">
                     <a v-for="link in selectedItem.links" :href="link" target="_blank" :title="getIconByUrl(link).name"
                         class="btn d-flex justify-content-center align-items-center mx-2 hover"
                         :class="getIconByUrl(link).class"
