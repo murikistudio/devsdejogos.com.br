@@ -7,16 +7,17 @@ swiper: true
 ---
 
 <!-- Cabeçalho -->
-
-<div class="alert alert-dark page-content-thin mb-2 px-2 pb-2" role="alert">
+<div class="alert alert-dark page-content-thin mb-2 px-0 pb-0" role="alert">
     <h4 class="text-center text-muted alert-heading">Catálogo de {{ page.title }}</h4>
-    <div class="alert alert-secondary m-0 p-2" role="alert">
-        <p class="text-center m-0 font-tiny">
+
+    <div class="alert alert-light m-0">
+        <p class="text-center text-muted m-0 font-tiny">
             {{ site.description }}
-            É <strong>criador de conteúdo</strong> e quer participar dessa lista? Participe do grupo <i>Desenvolvedores de Jogos</i> no
-            <a target="_blank" href="{{ site.data.contact[0].url }}">WhatsApp</a>
-            ou abra um issue no
-            <a target="_blank" href="{{ site.data.contact[2].url }}">GitHub</a>!
+        </p>
+        <p class="text-center m-0 mt-2 font-tiny">
+            É <strong>criador de conteúdo</strong> e quer participar dessa lista?
+            Participe do grupo <a target="_blank" href="{{ site.data.contact[0].url }}">Desenvolvedores de Jogos</a>
+            no WhatsApp!
         </p>
     </div>
 </div>

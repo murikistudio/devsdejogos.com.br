@@ -21,8 +21,7 @@
 title: Desenvolvedores de Jogos
 email:
 description: >- # this means to ignore newlines until "baseurl:"
-  A iniciativa <strong>Desenvolvedores de Jogos</strong> é o ponto de encontro para
-  <i>criadores</i> e <i>entusiastas</i> de jogos brasileiros <strong>independentes</strong>!
+  O ponto de encontro para <i>criadores</i> e <i>entusiastas</i> de jogos <strong>indie</strong> brasileiros!
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://devsdejogos.com.br" # the base hostname & protocol for your site, e.g. http://example.com
