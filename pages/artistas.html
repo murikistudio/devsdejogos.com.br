@@ -1,0 +1,28 @@
+---
+layout: default
+title: Artistas
+permalink: artistas
+vue: true
+swiper: true
+---
+
+<!-- Cabeçalho -->
+<div class="alert alert-dark page-content-thin mb-2 px-0 pb-0" role="alert">
+    <h4 class="text-center text-muted alert-heading">Catálogo de {{ page.title }}</h4>
+
+    <div class="alert alert-light m-0">
+        <p class="text-center text-muted m-0 font-tiny">
+            {{ site.description }}
+        </p>
+        <p class="text-center m-0 mt-2 font-tiny">
+            É <strong>artista</strong> (músico, ilustrador, modelador, animador, etc) e quer participar dessa lista?
+            Participe do grupo <a target="_blank" href="{{ site.data.contact[0].url }}">Desenvolvedores de Jogos</a>
+            no WhatsApp!
+        </p>
+    </div>
+</div>
+
+<!-- Dados da listagem de jogos -->
+<script src="/assets/js/artistas.js"></script>
+
+{% include listing.html %}
