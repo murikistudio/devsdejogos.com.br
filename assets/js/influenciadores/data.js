@@ -1,6 +1,23 @@
 // Definições de influenciadores
 document.ListingData = [
     {
+        name: 'Foxgear GameDev',
+        id: 'foxgeargamedev',
+        directory: 'influenciadores/foxgeargamedev',
+        tags: ['youtube'],
+        author_name: 'Foxgear GameDev',
+        author_url: 'https://www.youtube.com/@foxgeargamedev5885',
+        date_added: '2025-04-08 10:00',
+        short_description: 'Sou Glauco Netto, conhecido como Fox pelos amigos gamers. Sou apaixonado por jogos e essa paixão me levou a começar a desenvolver jogos de forma independente. Faço vídeos de meus jogos, projetos e trabalhos em parcerias, conforme eles forem concluídos e/ou permitidos.',
+        images: [
+            'screenshot-1.webp',
+        ],
+        links: [
+            'https://www.youtube.com/@foxgeargamedev5885',
+            'https://www.instagram.com/foxgear_games/',
+        ],
+    },
+    {
         name: 'Yatsura Games',
         id: 'yatsuragames',
         directory: 'influenciadores/yatsuragames',
