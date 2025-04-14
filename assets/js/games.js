@@ -1,6 +1,33 @@
 // Definições de jogos
 document.ListingData = [
     {
+        name: 'Angry Bean',
+        id: 'angrybean',
+        directory: 'games/angrybean',
+        tags: ['action', 'adventure', 'arcade', 'casual'],
+        author_name: 'DeadQueen Studios',
+        author_url: 'https://deadqueenstudios.com/',
+        date_added: '2025-04-14 20:00',
+        short_description: 'Entre no mundo de <strong>Angry Bean</strong>: um jogo arcade frenético, onde feijões armados enfrentam enxames de insetos alienígenas! Destrua inimigos, colete armas e sobreviva em fases desafiadoras.',
+        images: [
+            'screenshot-0.webp',
+            'screenshot-1.webp',
+            'screenshot-2.webp',
+            'screenshot-3.webp',
+            'screenshot-4.webp',
+            'screenshot-5.webp',
+            'screenshot-6.webp',
+            'screenshot-7.webp',
+        ],
+        links: [
+            'https://store.steampowered.com/app/3616940/Angry_Bean/',
+            'https://www.instagram.com/deadqueen_studios',
+            'https://www.facebook.com/DeadQueenStudios',
+            'https://www.youtube.com/@DeadQueen_Studios',
+            'https://deadqueenstudios.com/',
+        ],
+    },
+    {
         name: 'Birds Adventure',
         id: 'birdsadventure',
         directory: 'games/birdsadventure',
