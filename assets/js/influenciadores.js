@@ -6,14 +6,14 @@ document.ListingData = [
         directory: 'influenciadores/clubeindiegamer',
         tags: ['youtube', 'instagram'],
         author_name: 'Clube Indie Gamer',
-        author_url: 'https://www.youtube.com/@ClubeIndieGamer',
+        author_url: 'https://www.youtube.com/@ClubeIndieGamer2025',
         date_added: '2025-04-08 11:00',
         short_description: 'Aqui, a paixão pelos jogos transcende o mainstream, mergulhando nas joias escondidas e nas obras-primas criativas que os grandes estúdios muitas vezes ofuscam. No "Clube Indie Gamer", celebramos a inovação, a criatividade e a paixão que definem o cenário indie.',
         images: [
             'screenshot-1.webp',
         ],
         links: [
-            'https://www.youtube.com/@ClubeIndieGamer',
+            'https://www.youtube.com/@ClubeIndieGamer2025',
             'https://www.instagram.com/clube.indie.gamer/',
             'https://www.tiktok.com/@clube.indie.gamer',
         ],
