@@ -191,6 +191,26 @@ document.ListingData = [
         ],
     },
     {
+        name: 'Nin Ninja Adventure',
+        id: 'ninninjaadventure',
+        directory: 'games/ninninjaadventure',
+        tags: ['action', 'adventure'],
+        author_name: 'Caktus Studio',
+        author_url: 'https://www.instagram.com/caktusgamestudio',
+        date_added: '2025-05-29 13:00',
+        short_description: 'Nin Ninja Adventure é um jogo de aventura com muita ação que contém uma história de um pequeno aprendiz em busca de se tornar um ninja.',
+        images: [
+            'screenshot-1.webp',
+            'screenshot-2.webp',
+            'screenshot-3.webp',
+            'screenshot-4.webp',
+        ],
+        links: [
+            'https://caktus-studio.itch.io/nin-ninja-adventure',
+            'https://www.instagram.com/caktusgamestudio',
+        ],
+    },
+    {
         name: 'The Criminal Code Brasil',
         id: 'thecriminalcodebrasil',
         directory: 'games/thecriminalcodebrasil',
