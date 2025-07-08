@@ -73,6 +73,27 @@ document.ListingData = [
         ],
     },
     {
+        name: 'DamasAI',
+        id: 'damasai',
+        directory: 'games/damasai',
+        tags: ['casual', 'sports', 'strategy', 'puzzle'],
+        author_name: 'Rafael Oliveira',
+        author_url: 'https://www.instagram.com/raphael_meliodas',
+        date_added: '2025-07-08 17:00',
+        short_description: '<b>DamasAI</b> é uma implementação moderna e completa do jogo de damas tradicional, com gráficos fluidos e uma inteligência artificial desafiadora. Teste suas habilidades estratégicas com uma IA que utiliza algoritmos avançados de busca e avaliação de posição.',
+        images: [
+            'screenshot-1.webp',
+            'screenshot-2.webp',
+            'screenshot-3.webp',
+            'screenshot-4.webp',
+        ],
+        links: [
+            'https://lordymine.itch.io/damasai',
+            'https://www.instagram.com/raphael_meliodas',
+            'https://www.linkedin.com/in/rafael-oliveira-01188829a/',
+        ],
+    },
+    {
         name: 'DefendAnts',
         id: 'defendants',
         directory: 'games/defendants',
