@@ -36,6 +36,26 @@ document.ListingData = [
         ],
     },
     {
+        name: 'Muriki Studio',
+        id: 'murikistudio',
+        directory: 'influenciadores/murikistudio',
+        tags: ['youtube', 'instagram'],
+        author_name: 'Muriki Studio',
+        author_url: 'https://www.youtube.com/@foxgeargamedev5885',
+        date_added: '2025-04-08 10:00',
+        short_description: 'Sou Glauco Netto, conhecido como Fox pelos amigos gamers. Sou apaixonado por jogos e essa paixão me levou a começar a desenvolver jogos de forma independente. Faço vídeos de meus jogos, projetos e trabalhos em parcerias, conforme eles forem concluídos e/ou permitidos.',
+        images: [
+            'screenshot-1.webp',
+        ],
+        links: [
+            'https://www.youtube.com/@murikistudio',
+            'https://www.tiktok.com/@murikistudio',
+            'https://www.instagram.com/murikistudio',
+            'https://www.linkedin.com/company/murikistudio',
+            'https://www.twitch.tv/murikistudio',
+        ],
+    },
+    {
         name: 'Yatsura Games',
         id: 'yatsuragames',
         directory: 'influenciadores/yatsuragames',
