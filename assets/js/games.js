@@ -1,6 +1,36 @@
 // Definições de jogos
 document.ListingData = [
     {
+        name: 'Akuma\'s Bloodrain',
+        id: 'akumasbloodrain',
+        directory: 'games/akumasbloodrain',
+        tags: ['action', 'adventure', 'arcade', 'horror'],
+        author_name: 'Sensen Games',
+        author_url: 'https://store.steampowered.com/developer/sensengames',
+        date_added: '2025-10-01 22:00',
+        short_description: 'Jogue como um ninja sanguinário e ágil nesse retro fps de ritmo acelerado inspirado nos clássicos Doom.',
+        description: 'Como ninja Akiji, você vai explodir e retalhar hordas de akumas/yokais que estão atacando sua vila japonesa. Movimente-se rapidamente pela arena escalando e impulsionando, deixando um rastro de sangue e pedaços de demônios por onde você passar!',
+        images: [
+            'screenshot-1.webp',
+            'screenshot-2.webp',
+            'screenshot-3.webp',
+            'screenshot-4.webp',
+            'screenshot-5.webp',
+            'screenshot-6.webp',
+            'screenshot-7.webp',
+            'screenshot-8.webp',
+            'screenshot-9.webp',
+        ],
+        links: [
+            'https://store.steampowered.com/app/3692360/Akumas_Bloodrain/',
+            'https://www.instagram.com/sensengames/',
+            'https://www.tiktok.com/@sensengames',
+            'https://www.youtube.com/@sensengames',
+            'https://x.com/sensengames',
+            'https://www.facebook.com/sensengames',
+        ],
+    },
+    {
         name: 'Angry Bean',
         id: 'angrybean',
         directory: 'games/angrybean',
