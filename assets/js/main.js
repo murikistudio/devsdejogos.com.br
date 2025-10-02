@@ -25,6 +25,8 @@ function getIconByUrl(url) {
         return {icon: 'twitter.svg', class: 'bg-info', name: 'Twitter'};
     }  else if (url.includes('x.com')) {
         return {icon: 'x.svg', class: 'bg-black', name: 'X'};
+    }  else if (url.includes('twitch')) {
+        return {icon: 'twitch.svg', class: 'bg-purple', name: 'Twitch'};
     } else if (url.includes('youtube')) {
         return {icon: 'youtube.svg', class: 'bg-danger', name: 'YouTube'};
     } else {

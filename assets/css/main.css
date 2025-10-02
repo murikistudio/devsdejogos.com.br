@@ -169,3 +169,7 @@ li.nav-item:not(:last-child) {
 .hover:hover {
     filter: brightness(1.2) !important;
 }
+
+.bg-purple {
+    background-color: #a970ff !important;
+}
