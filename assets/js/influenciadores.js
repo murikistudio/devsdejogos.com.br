@@ -39,11 +39,11 @@ document.ListingData = [
         name: 'Muriki Studio',
         id: 'murikistudio',
         directory: 'influenciadores/murikistudio',
-        tags: ['youtube', 'instagram'],
+        tags: ['youtube', 'tiktok', 'instagram', 'linkedin', 'twitch'],
         author_name: 'Muriki Studio',
-        author_url: 'https://www.youtube.com/@foxgeargamedev5885',
-        date_added: '2025-04-08 10:00',
-        short_description: 'Sou Glauco Netto, conhecido como Fox pelos amigos gamers. Sou apaixonado por jogos e essa paixão me levou a começar a desenvolver jogos de forma independente. Faço vídeos de meus jogos, projetos e trabalhos em parcerias, conforme eles forem concluídos e/ou permitidos.',
+        author_url: 'https://www.youtube.com/@murikistudio',
+        date_added: '2025-10-01 23:00',
+        short_description: 'Muriki Studio é uma equipe de desenvolvimento de jogos indie formada em 2022. A equipe faz lives desenvolvendo seus jogos e conversando sobre variedades.',
         images: [
             'screenshot-1.webp',
         ],
@@ -79,6 +79,14 @@ document.ListingTags = [
     {
         label: 'Instagram',
         value: 'instagram',
+    },
+    {
+        label: 'LinkedIn',
+        value: 'linkedin',
+    },
+    {
+        label: 'TikTok',
+        value: 'tiktok',
     },
     {
         label: 'Twitch',
