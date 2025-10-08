@@ -170,6 +170,25 @@ document.ListingData = [
         ],
     },
     {
+        name: 'Estelar Hunter',
+        id: 'estelarhunter',
+        directory: 'games/estelarhunter',
+        tags: ['action', 'arcade', 'adventure'],
+        author_name: 'Caktus Studio',
+        author_url: 'https://www.instagram.com/caktus_games',
+        date_added: '2025-10-08 13:00',
+        short_description: 'Um <strong>caçador de tesouros</strong> começa a explorar novos planetas em busca de diamantes e moedas de ouro.',
+        images: [
+            'screenshot-1.webp',
+            'screenshot-2.webp',
+            'screenshot-3.webp',
+        ],
+        links: [
+            'https://caktus-studio.itch.io/estelarhunter',
+            'https://www.instagram.com/caktus_games',
+        ],
+    },
+    {
         name: 'Flashlight',
         id: 'flashlight',
         directory: 'games/flashlight',
@@ -271,7 +290,7 @@ document.ListingData = [
         directory: 'games/ninninjaadventure',
         tags: ['action', 'adventure'],
         author_name: 'Caktus Studio',
-        author_url: 'https://www.instagram.com/caktusgamestudio',
+        author_url: 'https://www.instagram.com/caktus_games',
         date_added: '2025-05-29 13:00',
         short_description: 'Nin Ninja Adventure é um jogo de aventura com muita ação que contém uma história de um pequeno aprendiz em busca de se tornar um ninja.',
         images: [
@@ -282,7 +301,7 @@ document.ListingData = [
         ],
         links: [
             'https://caktus-studio.itch.io/nin-ninja-adventure',
-            'https://www.instagram.com/caktusgamestudio',
+            'https://www.instagram.com/caktus_games',
         ],
     },
     {
