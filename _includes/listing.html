@@ -73,7 +73,7 @@
                         <span v-if="isDateLessThanDaysAgo(item.date_added, 7)" v-text="'NOVO!'" :title="formatDate(item.date_added)"
                             class="badge bg-success badge-item-new bg-gradient border border-white px-2 py-1 cursor-pointer"></span>
 
-                        <img class="rounded-top-4" loading="lazy" :src="'/assets/img/' + item.directory + '/' + item.images[0]" :alt="item.name">
+                        <img class="rounded-top-4" loading="lazy" :src="'{{ site.baseurl }}/assets/img/' + item.directory + '/' + item.images[0]" :alt="item.name">
                     </div>
 
                     <!-- Informações -->
@@ -93,7 +93,7 @@
                             <a v-for="link in item.links" :href="link" target="_blank" :title="getIconByUrl(link).name"
                                 class="btn d-flex justify-content-center align-items-center mx-2"
                                 style="width: 1.5rem; height: 1.5rem; padding: 3px">
-                                <img :src="'/assets/img/icons/' + getIconByUrl(link).icon" class="w-100">
+                                <img :src="'{{ site.baseurl }}/assets/img/icons/' + getIconByUrl(link).icon" class="w-100">
                             </a>
                         </div>
                     </div>
@@ -114,7 +114,7 @@
                     <div class="swiper-wrapper">
                         <div v-for="image in selectedItem?.images" class="swiper-slide">
                             <div class="text-decoration-none d-flex flex-column overflow-hidden">
-                                <img class="" loading="lazy" :src="'/assets/img/' + selectedItem.directory + '/' + image" :alt="image">
+                                <img class="" loading="lazy" :src="'{{ site.baseurl }}/assets/img/' + selectedItem.directory + '/' + image" :alt="image">
                             </div>
                         </div>
                     </div>
@@ -136,7 +136,7 @@
                         class="btn d-flex justify-content-center align-items-center mx-2 hover"
                         :class="getIconByUrl(link).class"
                         style="width: 3rem; height: 3rem; padding: 6px">
-                        <img :src="'/assets/img/icons/' + getIconByUrl(link).icon" class="w-100">
+                        <img :src="'{{ site.baseurl }}/assets/img/icons/' + getIconByUrl(link).icon" class="w-100">
                     </a>
                 </div>
             </div>
@@ -148,4 +148,4 @@
     </div>
 </div>
 
-<script src="/assets/js/listing.js"></script>
+<script src="{{ site.baseurl }}/assets/js/listing.js"></script>

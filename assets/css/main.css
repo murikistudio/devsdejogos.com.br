@@ -14,7 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: url('/assets/img/banner-background.webp');
+    background: url('{{ site.baseurl }}/assets/img/banner-background.webp');
     background-attachment: fixed;
     animation: background-scroll 60s linear infinite;
 }

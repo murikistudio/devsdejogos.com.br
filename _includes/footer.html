@@ -4,7 +4,7 @@
         {% for contact in site.data.contact %}
             {% if contact.show_on_footer %}
                 <a class="social-icon" href="{{ contact.url }}" alt="{{ contact.name }}" target="_blank">
-                    <img class="w-100 h-100 social-icon-img" src="/assets/img/icons/{{ contact.icon }}.svg" alt="{{ contact.name }}">
+                    <img class="w-100 h-100 social-icon-img" src="{{ site.baseurl }}/assets/img/icons/{{ contact.icon }}.svg" alt="{{ contact.name }}">
                 </a>
             {% endif %}
         {% endfor %}

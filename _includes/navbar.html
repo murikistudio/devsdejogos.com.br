@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-bars" style="position: sticky; top: 0; z-index: 99;">
     <div class="container-fluid">
-        <a class="navbar-brand text-white" href="{{ site.url }}">
-            <img src="/assets/img/logo.webp" alt="Logo" style="width: 1.5rem">
+        <a class="navbar-brand text-white" href="{{ site.baseurl }}/">
+            <img src="{{ site.baseurl }}/assets/img/logo.webp" alt="Logo" style="width: 1.5rem">
             <span class="px-2" style="vertical-align: middle">{{ site.title }}</span>
         </a>
         <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -13,7 +13,7 @@
                 {% for section in site.data.toc %}
                 {% if section.show_in_nav %}
                 <li class="nav-item px-0 py-0">
-                    <a class="nav-link px-0 py-0 text-white" href="{{ site.url }}/{{ section.url }}">
+                    <a class="nav-link px-0 py-0 text-white" href="{{ site.baseurl }}/{{ section.url }}">
                         <small>
                             <strong>{{ section.title }}</strong>
                         </small>
