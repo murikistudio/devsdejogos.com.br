@@ -1,2 +1,2 @@
-# devsdejogos.com.br
-Repositório do site devsdejogos.com.br
+# devsdejogos
+Repositório do site devsdejogos

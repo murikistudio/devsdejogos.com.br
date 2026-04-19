@@ -24,9 +24,9 @@ description: >- # this means to ignore newlines until "baseurl:"
   O ponto de encontro para <i>criadores</i> e <i>entusiastas</i> de jogos <strong>indie</strong> brasileiros!
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://devsdejogos.com.br" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://murikistudio.github.io/devsdejogos" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  murikistudio
-github_repo:  devsdejogos.com.br
+github_repo:  devsdejogos
 author: Joel Gomes
 author_url: https://www.linkedin.com/in/joelgomesdasilva/
 
